@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Modules</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Modules</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+
+              <li><a href="./index.html">1.Introduction</a></li>
+              <li><a href="./variables.html">2. Variables </a></li>
+              <li><a href="./data_types.html">3.Data types</a></li>
+              <li><a href="./operators.html">4.Operators</a>  </li>
+              <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+              <li><a href="./in,print.html">6.I/O_Operations</a></li>
+              <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+              <li><a href="./Functions.html">8.Functions</a></li>
+              <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+              <li><a href="./sequences.html">9.Sequences</a></li>
+              <li class="current"><a href="./modules.html">10.Modules</a></li>
+              <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+              <li><a href="./oops2.html">11.1.Methods</a></li>
+              <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+              <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+              <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+              <li><a href="./lambdas.html">12.lambdas</a></li>
+              <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+              <li><a href="./File_handling.html">14.File_Handling</a></li>
+              <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+              <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+              <li><a href="./sql.html">17.Database_Management</a></li>
+                
+            </ul>
+            
+            
+        
+        
+            <p>  <span> Module:</span> <br><br>
+                1)A module is a group of statements, variables, functions, methods, classes, etc saved or stored in to a file.<br>
+                2)The module concept will improve the maintenance and readability of the code.<br> 
+                3)Using module concept we can achieve reusability.<br>
+                4)A module is a file containing python definitions and statements. Any python program that we develop and save with the extension as .py is by default a module.<br>
+                5)A module can contain executable statements.<br>
+                6) When we execute a module all the executable statements in that module will be executed automatically.<br>
+                <b>7**)To access code from another python file in the current python file we use modules</b><br>
+                8)The module you want to import in new python file is parent file.<br>
+                9)If we want to use some lines of code in another program we use import Keyword.<br>
+                <b>Syntax:</b><br> import name_of_module_you_want_to_import<br><br><br><br>
+                program1, program2 are two different python files.<br>
+                <img src="./img/mod1.JPG"><br><br>
+                Now, when we run program 2, the output will be as follows:<br><br>
+                <img src="./img/mod2.JPG">
+
+                
+                
+             
+               <br><br><br>
+             <span>Examples demonstrating Implimentation of modules in different styles</span><br><br>
+              <b> student.py(New python file)(Parent file)</b> <br>
+                rollno = 45<br>
+                name = 'abcd'<br>
+                marks = 67.8<br>
+                def display():<br>
+                &emsp;&emsp;    print(rollno)<br>
+                &emsp;&emsp;   print(name)<br>
+                &emsp;&emsp;   print(marks)<br>
+                def msg():<br>
+                &emsp;&emsp;    print('msg function from student module')<br><br><br>
+               <b> institute.py(New python file)(parent file)</b><br>
+                course = 'python'<br>
+                name = 'xyz'<br>
+                numberofstudents = 100<br>
+                def show():<br>
+                &emsp;&emsp;    print(course)<br>
+                &emsp;&emsp;     print(name)<br>
+                &emsp;&emsp;    print(numberofstudents)<br>
+                def demo():<br>
+                &emsp;&emsp;   print('demo function from institute module')<br>
+                To access the members or attributes of a module, we need to get that module into the current module or program by using import keyword. <br>
+                <br><br>
+                <b>Syntax:</b> <br>
+                import modulename<br>
+                import modulename1, modulename2……<br>
+               <b> Note:</b> We can get multiple modules into the program at the same time.<br><br><br>
+               In a python program we can specify any number of import statements and we can specify the import statements anywhere in the program.<br>
+               <br><br>
+               <b>1) Program: to use module</b>
+              <b> student.py in another python file</b>
+              <b>sample.py in New python file(child file)</b><br>
+               import student<br>
+               print(student.rollno)<br>
+               print(student.name)<br>
+               print(student.marks)<br>
+               import institute<br>
+               institute.show()<br>
+               institute.demo()<br><br><br>
+               <br><br>
+               <b> 2)Program: to use both student and institute modules in a new python file</b> 
+              <b> sample.py(child file)</b><br>
+               import student<br>
+               import institute<br>
+               print(student.rollno)<br>
+               print(student.name)<br>
+               print(student.marks)<br>
+               student.msg()<br>
+               institute.show()<br>
+               institute.demo()<br><br>
+            <b> 3) Program: to use both student and institute modules by importing at a time in new python file</b> 
+               <b>sample.py(child file)</b><br>
+               import student, institute<br>
+               print(student.rollno)<br>
+               print(student.name)<br>
+               print(student.marks)<br>
+               student.msg()<br>
+               institute.show()<br>
+               institute.demo()<br>
+               <br><br>
+               In a program if we are using many members of a particular module, then to access every member of that module we need to specify the module name. Instead of specifying the module name multiple times, we can provide an alias name to that module name and access the members of that module by using the alias name.<br>
+               <br>
+               <b> Syntax:</b>
+               import modulename as mn<br>
+               import modulename1 as m1, modulename2 as m2, ……<br>
+             <b> Note:</b>  If we specify an alias name to a module, then the members of that module can be accessed by using alias name only.<br>
+             <br><br>
+             <b> 4) Program: to implement module by giving alias names(child file)</b><br>
+              
+               import student as s<br>
+               import institute as i<br>
+               print(s.rollno)<br>
+               print(s.name)<br>
+               print(s.marks)<br>
+               s.msg()<br>
+               i.show()<br>
+               i.demo()<br>
+               <br><br>
+             <b>5) Program: to implement module by giving alias names in a single line(child file)</b> <br>
+               
+               import student as s, institute as i<br>
+               print(s.rollno)<br>
+               print(s.name)<br>
+               print(s.marks)<br>
+               s.msg()<br>
+               i.show()<br>
+               i.demo()<br>
+               If a particular member is used multiple times in a program then every time we access that member we need to specify either the module name or the alias name. If we want to access the members from the module, without specifying the module name or alias name then, we need to take the help of from import.<br>
+               <br><br>
+               <b>  Syntax: </b><br>
+               from modulename import member<br>
+               from modulename import member1, member2,………..<br>
+               <br><br>
+               <b>6) Program: to implement module by importing specific item(variables)(child file)</b><br>
+               
+               from student import rollno,name<br>
+               print(rollno)<br>
+               print(name)<br>
+               from student import msg<br>
+               msg()<br>
+               <br><br>
+               <b>7)  Program: to implement module by importing specific item(Functions)(child file)</b><br>
+               
+               from student import display<br>
+               from institute import course, name, numberofstudents, demo<br>
+               display()<br>
+               print(course)<br>
+               print(name)<br>
+               print(numberofstudents)<br>
+               demo()<br><br><br>
+               When we are accessing the members from a module, we can even specify an alias name to the members.<br>
+              <b> Syntax:</b><br>
+               from modulename import member as  m<br>
+               from modulename import member1 as m1, member2 as m2,………<br>
+               Note: If we specify an alias name to a member then we must access that member by using the alias name only.<br>
+               <br><br>
+               <b> 8)Program: to implement module by importing specific item and giving it alias name(child file)</b><br>
+               
+               from student import display as d<br>
+               from institute import course as c, numberofstudents as nos<br>
+               d()<br>
+               print(c)<br>
+               print(nos)<br><br><br>
+               
+               If we want to access all the members from a module then we need to specify the names of all the members separated by comma while importing the module. Instead of specifying all the members separated by comma, we can specify a * symbol.<br>
+             <b>  Syntax: </b><br>
+               from modulename import *<br><br><br>
+            <b> 9)  Program: to implement module by importing all the items(child file)</b><br>
+               
+               from student import *<br>
+               from institute import *<br>
+               display()<br>
+               msg()<br>
+               print(course)<br>
+               print(numberofstudents)<br>
+               demo()<br><br><br>
+             <b>10  Program: to implement module in oops(child file)</b><br>
+               demo.py<br>
+               class Parent:<br>
+               &emsp;&emsp;    a = 10<br>
+               &emsp;&emsp;  def m1(self):<br>
+                   &emsp;&emsp;  &emsp;&emsp;    self.b = 20<br>
+                   &emsp;&emsp; &emsp;&emsp;   print('parent class m1 method')<br><br><br>
+               
+               sample.py<br>
+               from demo import *<br>
+               class Child(Parent):<br>
+               &emsp;&emsp;  c = 30<br>
+               &emsp;&emsp;  def m2(self):<br>
+               &emsp;&emsp;&emsp;&emsp;    self.d = 40<br>
+               &emsp;&emsp;&emsp;&emsp;       print('child class m2 method')<br>
+               c = Child()<br>
+               c.m1()<br>
+               c.m2()<br>
+               print(c.a)<br>
+               print(c.b)<br>
+               print(c.c)<br>
+               print(c.d)<br><br><br>
+             <b>  Module Search PATH:</b><br>
+When a module is imported, the python interpreter will first search for a built-in module with that name. If not found, the python interpreter then searches for a file named module.py in the current directory or a  list of directories given by sys.path<br>
+<b>__pycache__ folder:</b><br>
+When we are using a module in another program, the module will be complied and placed in __pycache__ folder.<br>
+The  __pycache__ folder will be created only when, we use a module in another program. All the modules used in any other program will be compiled and placed in__pycache__ folder for faster accessibility and reusability. <br>
+ To speed up the process of loading the modules, python language caches the compiled version of each module in the __pycache__ folder under the name module.version.pyc. This naming convention allows compiled modules from different releases and different versions of python to coexist. <br>
+When a module is used in another module, the python language checks the modification date of the source and  the compiled version to see if it’s out of date and needs to be recompiled or not and this is a completely automatic process of python language.<br>
+<img src="./img/__pycache__.JPG"><br><br>
+<b>dir():</b> dir() will provide the sorted list of all the members available in the current module.<br>
+Example:<br>
+print(dir())  This statement will display all the members available in the current module.<br>
+<b>Syntax:</b><br>
+print(dir(module name))<br>
+<b>Example:</b><br>
+print(dir(demo)) This statement will display all the members available in the specified module.<br>
+When we use dir( ) function, to display the list of members available in a module, we get some predefined members like.<br>
+__annotations__<br>
+__builtins__<br>
+__doc__<br>
+__file__<br>
+__loader__<br>
+__name__<br>
+__package__<br>
+__spec__<br><br><br>
+<b>__name__:</b> The__name__ is a special variable which will contain either the module name or the method name.<br>
+When we specify __name__ variable in a module or a program and execute the same module or program, then the value of __name__ is __main__<br>
+If we specify __name__ in a module or a program and use that module in another module and if we execute the other module then the value of __name__ will be the name of the module in which __name__ is specified.<br>
+<br><br>
+Example:<br>
+demo.py<br>
+print(__name__)<br>
+If we execute demo.py module then the output will be __main__<br>
+Meaning, the value of __name__ is __main__ within the module,if we import it into other module then it is not __main__, instead the value of __name__ is the name of module that we imported.<br><br><br>
+
+Example:<br>
+sample.py<br>
+import demo<br>
+If we execute sample.py then the output will be demo<br><br>
+Meaning, the value of __name__ is not __main__,instead it is the name of module imported in this module i.e demo.<br><br>
+<b>Using __name__ to restrict execution of functions:</b><br><br>
+<img src="./img/mod4.JPG"><br><br><br>
+Suppose there are 2 programs like this.<br><br>
+In program1 there are 2 functions hi() and hello().<br>
+As menctioned in the previous topic:<br>
+The value of __name__ in program1 is __main__.<br>
+The value of __name__ in program2 is program1, as we have imported program1 into program2.<br><br>
+now in program1, we have  statements saying that.<br>
+if __name__ == "__main__":<br>
+&emsp;&emsp;     hi()<br>
+else:<br>
+&emsp;&emsp;     hello()<br>
+<b>When is hi() Executed?</b><br>
+In the above conditional statement, we specified hi() to execute only when __name__ is __main__.<br>
+we know that value of __name__ is __main__ in program1.<br>
+So, hi() is executed when program1 is executed.<br>
+hi() is not executed when program2 is executed as value of __name__ is program1, but not __main__.<br><br>
+<b>when is hello() Executed?</b><br>
+In above statement we specified hello() to execute in else block, meaning when value of __name__ is not __main__.<br>
+In program1, the value of __name__ is __main__, so hello() is not executed when program1 is executed.<br>
+In program2, the value of __name__ is program1, not __main__, so hello() is executed when program2 is executed.<br><br>
+<b>Output when program1 is executed:</b><br>
+<img src="./img/mod5.JPG"><br>
+only function hi() is executed.<br><br>
+Output when program2 is executed:<br>
+<b><img src="./img/mod6.JPG"></b><br>
+only function hello() is executed.<br><br><br>
+
+
+<b>Program:</b> to demonstrate __name__ attribute<br>
+sample.py<br>
+def f1():<br>
+&emsp;&emsp;   print('hello guys')<br>
+def f2():<br>
+&emsp;&emsp;    print('good morning')<br><br>
+
+def main():<br>
+&emsp;&emsp;   f1()<br>
+&emsp;&emsp;   f2()<br>
+if __name__=="__main__":<br>
+&emsp;&emsp;   main()<br>
+In the above program the main() will be called only if we are executing the current program.<br>
+<br>
+<b>Reloading a Module:</b><br>
+When we want to use a module in another module then, we take the help of import statement. Even if we specify the import statements multiple times, the module will be loaded only one time. If we want to reload any particular module then, we take the help of reload() available in either imp module or importlib module.<br>
+<br><br>
+<b>Syntax:</b><br>
+imp.reload(modulename) (deprecated)<br>
+importlib.reload(modulename)<br><br><br>
+<b>Program:</b> to implement reloading of a module<br>
+demo.py<br>
+print('good morning from demo module')<br><br><br>
+
+<b>Program: to implement reloading of a module using imp module</b><br>
+sample.py<br>
+print('this is a sample module')<br>
+print('sample line1')<br>
+import demo<br>
+import demo<br>
+print('sample line2')<br>
+from imp import reload<br>
+reload(demo)<br>
+import demo<br>
+print('sample line3')<br><br><br><br>
+
+<b>Program: to implement reloading of a module using importlib module</b><br>
+sample.py<br>
+print('this is a sample module')<br>
+print('sample line1')<br>
+import demo<br>
+import demo<br>
+print('sample line2')<br>
+import importlib<br>
+importlib.reload(demo)<br>
+import demo<br>
+print('sample line3')<br><br><br><br>
+
+
+
+
+
+<span>Default Modules:</span><br>
+Every python program that we develop will by default import 2 modules.<br>
+current module (user defined module)<br>
+builtins module (predefined module)<br>
+All the classes, functions, variables that are available in the both the default modules can be accessed directly in any python program.<br>
+Example:<br>
+import builtins<br>
+print(dir(builtins))<br><br><br>
+
+Importing a module: We can import a module into the python program in 2 ways.<br>
+By using import keyword(static loading)<br>
+By using import_module()(dynamic loading)<br>
+If we know the name of the module during the development time, then use import keyword but if we know the name of the module during the run time, then use import_module().<br>
+<b>Program: to implement dynamic loading of a module</b><br>
+import importlib<br>
+modname = input('Enter the module name : ')<br>
+importlib.import_module(modname)<br><br>
+
+<span>Package: </span><br>
+A package is a collection of related modules.<br>
+The package concept will improve the maintenance of the application.<br>
+The package is nothing but a folder or a directory.<br>
+We can specify any number of modules in a package <br>
+A package can contain any number of sub packages.<br>
+The name of a package can be any valid python identifier.<br>
+The industry recommends to specify the name of the package as the reverse of the domain name.<br>
+Domain name -------> www.google.com<br>
+Package name -------> com.google<br><br><br>
+
+
+
+
+
+
+
+
+
+<b>Program: to implement a module in a package</b><br>
+d:\python_practice\sample.py<br>
+class Parent:<br>
+&emsp;&emsp;  def msg(self):<br>
+&emsp;&emsp; &emsp;&emsp;       print('good morning')<br>
+d:\python_practice\demo.py<br>
+import python_practice.sample<br>
+p = python_practice.sample.Parent()<br>
+p.msg()<br><br><br>
+
+<b>math module:</b><br>
+The math module provides some mathematical functions which perform trigonometric functions, representation functions, logarithmic functions, angle conversion functions, etc<br>
+Program: to perform mathematical calculations using math module<br>
+from math import *<br>
+print(pow(2,5))		&emsp;&emsp; 				32.0<br>
+print(sqrt(16))		&emsp;&emsp; 				4.0<br>
+print(abs(-8))		&emsp;&emsp; 				8<br>
+print(floor(4.7))	&emsp;&emsp; 					4<br>
+print(ceil(4.7))	&emsp;&emsp; 					5<br>
+print(radians(30))		&emsp;&emsp; 			0.5235987755982988<br>
+print(degrees(30))	&emsp;&emsp; 				1718.8733853924696<br>
+print(sin(0.5))		&emsp;&emsp; 				0.479425538604203<br>
+print(cos(0.5))		&emsp;&emsp; 				0.8775825618903728<br>
+print(tan(0.5))		&emsp;&emsp; 				0.5463024898437905<br>
+print(log(10))		&emsp;&emsp; 				2.302585092994046<br>
+print(factorial(5))	&emsp;&emsp; 				120<br>
+print(pi)			&emsp;&emsp; 			3.141592653589793<br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+<span>random module:</span><br>
+This module can be used to generate a number which is of either int type or float type or a select a value from a sequence.<br>
+
+<b>random():</b> This function generates a random float number between 0.0 to 1.0. The function doesn't need any arguments.<br>
+<b>uniform():</b> This function generates a floating point number within a given range.<br>
+<b>randint():</b> This function returns a random integer between the specified integers.<br>
+<b>randrange(): </b>This function returns a randomly selected element from the range created by the start, stop and step arguments. The value of start is 0 by default. Similarly, the value of step is 1 by default.<br>
+<b>choice():</b> This function returns a randomly selected element from list, tuple or string which can be indexed or a non-empty sequence. If we specify an empty sequence as argument, then it raises an IndexError.<br>
+<b>shuffle():</b> This functions randomly reorders the elements in a list.<br><br>
+
+<b>Program: to perform random operations by using the functions of random module</b><br>
+from random import *<br>
+print(random())			&emsp;&emsp; 			0.1902417674352388<br>
+print(uniform(30,60))	&emsp;&emsp; 			58.21928181005983<br>
+print(randint(11,20))	&emsp;&emsp; 				16<br>
+print(randrange(41,70,2))	&emsp;&emsp; 			55<br>
+nos = [2,3,4,7,11,13,17,19,23]<br>
+print(choice(nos))			&emsp;&emsp; 		19<br>
+data = 'aeiou'<br>
+print(choice(data))		&emsp;&emsp; 			u<br><br><br><br><br>
+
+<b>Program: to generate random numbers like OTP or Captcha code</b><br>
+from random import *<br>
+print(randint(1,9), randint (1,9), randint(1,9), randint(1,9), sep=' ')	&emsp;&emsp; 	8 7 3 9<br>
+print(randint(1,9), randint(1,9), randint(1,9), randint(1,9), sep=' ')	&emsp;&emsp; 	4 1 2 5<br>
+print(randint(1,9), chr(randint(65,90)), randint(1,9), chr(randint(97,122)))&emsp;&emsp; 	3 N 6 p<br>
+
+
+               
+
+                
+
+                    
+            </p>
+            
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

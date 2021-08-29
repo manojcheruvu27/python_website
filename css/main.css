@@ -1,0 +1,136 @@
+/* Reset */
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* utility classes */
+.container{
+    margin: auto;
+    max-width: 1400px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+/* Header */
+#nav
+{
+    background: black;
+    color: #fff;
+    overflow: auto;
+    padding:  0.3rem  1rem;
+}
+html,body{
+    background: #000019;
+}
+.intro{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    
+    color: #fff;
+}
+
+.intro p{
+    width: 600rem;
+    margin:2rem;
+    text-align: left;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.intro p span{
+    font-size: 2rem;
+     color:#FF8C00;
+    
+}
+.intro ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 1.2rem;
+  margin-left: 0;
+  scroll-margin-bottom: 0;
+  
+  
+  
+  margin-top: 0;
+  background-color: #fff;
+  border-bottom: 1px solid black;
+  
+  color: black;
+  height: 100%; /* Full height */
+  position: sticky; /* Make it stick, even on scroll */
+  top: 0;
+  width: 120rem;
+  height: 100vh;
+  text-align: left;
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+.intro li,a{
+    padding: 1rem;
+    text-align: left;
+    width: 100%;
+
+
+   
+    
+}
+.intro a{
+    text-decoration: none;
+    padding: 1rem;
+    color: black;
+}
+.intro ul li:hover{
+    background-color: #555;
+    
+    cursor: pointer;
+    
+    
+}
+.intro ul li a:hover{
+    color:limegreen;
+
+}
+.intro ul li a{
+   display: block;
+   padding: 0.4rem;
+}
+
+.intro ul li.current
+{
+  background-color:gray;
+}
+.intro li:hover {
+    background-color: #555;
+    color:lawngreen;
+    cursor: pointer;
+    
+  }
+ .intro p  #lead{
+      font-size: 3rem;
+      color: gray; 
+  }
+  .intro p a{
+      background-color:#008000; 
+      color: #fff;
+      border-radius: 5px;
+      padding: 1rem;
+      text-decoration: nones;
+  }
+  .intro p a:hover{
+      background-color: lawngreen;
+  }
+  footer{
+      background-color: black;
+      color: #fff;
+      display: flex;
+      justify-content: flex-end;
+      padding: 1rem;
+  }
+  .intro p b{
+      color: lawngreen;
+  }
+  footer{
+      padding: 0.5rem;
+  }
+

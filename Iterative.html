@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Iterative Statements</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Iterative Statements</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li class="current"><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li><a href="./Functions.html">8.Functions</a></li>
+                <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li><a href="./lambdas.html">12.lambdas</a></li>
+                <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li><a href="./sql.html">17.Database_Management</a></li>
+            </ul>
+            
+            
+        
+        
+            <p>
+                <Span>Need for loops in programming:</Span> <br><br>
+                •	Loops are needed for repeating a statement or group of statements while a given condition is satisfied as true.<br><br>
+                •	Loops is needed in programs to excute the code  as many times required.<br><br>
+                •	In types of loops for loop are needed as they Best express the programers intent.<br><br>
+                •	It also reduces the Time and effort of the users.<br><br>
+                •	Loops are needs to iterate some code that would otherwise takes lines and lines for execution.<br><br>
+                    Where do we use loops in our daily life.<br><br>
+                •	a game requires loop that repeats the drawing of board, movement of items, input etc.<br><br>
+                •	In order to get the print outs of the pay slips of employees of a particular cost requires a loop to be assigned an then the loops can be employed to pick data belongings it's accounts such as current , Long term assets, expenses etc. Which may in turn to help to prepare trial balance income statement and other report that are need by management.<br><br>
+                • There are two types of loops in python namely while and for.<br><br>
+                <span>Loop control statements:</span><br>
+                Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed. Python supports the following control statements.<br>
+                1.	Continue<br>
+                2.	Break<br>
+                3.	Pass<br>
+                <b>Continue:</b> It returns the control to the beginning of the loop.<br>
+                <b>Break Statement:</b> It brings control out of the loop.<br>
+                <b> Pass Statement: </b>We use pass statement to write empty or when we don’t have content to execute. Pass is also used for empty control statements, functions and classes.<br><br>
+                <b>Using else statement with  loops:</b><br><br>
+                • loop executes the block until a condition is satisfied. When the condition becomes false, the statement immediately after the loop is executed. 
+                The else clause is only executed when your condition becomes false. If you break out of the loop, or if an exception is raised, it won’t be executed. <br><br>
+                <span>1.While Loop: </span><br><br>
+                while loop is used to execute a block of statements repeatedly until a given a condition is satisfied. And when the condition becomes false, the line immediately after the loop in program is executed. <br><br>
+
+                Syntax:<br><br>
+
+                while expression:<br>
+                &emsp;&emsp;  statement(s)<br><br>
+                • Within while loop statements are Indented by 4 spaces.<br>
+                <img src="./img/whilecond.jpg"><br><br>
+                <b>Simple while loop:</b><br><br>
+                <img src="./img/simplewhileloop.JPG"><br><br>
+               <span> Single statement while block</span><br><br>
+               • Just like the if block, if the while block consists of a single statement the we can declare the entire loop in a single line.<br><br>
+                count = 0<br>
+                while (count == 0):<br>
+                &emsp;&emsp;  print("Hello ")<br><br>
+
+                • It is suggested not to use this type of loops as it is a never ending infinite loop where the condition is always true and you have to forcefully terminate the compiler.<br><br>
+               
+                Syntax:<br><br>
+                while condition:<br>
+                &emsp;&emsp;    statements<br>
+                else:<br>
+                &emsp;&emsp;    statements<br><br>
+                • Within while loop statements are Indented by 4 spaces.<br>
+
+                <span>Using else stmt with while loop:</span><br><br>
+                <img src="./img/elsewithwhile.JPG"><br><br>
+                <b>Using Continue stmt with while loop:</b><br><br>
+                
+                <img src="./img/continuewhile.JPG"><br><br>
+                <b>Using break stmt with while loop:</b><br><br>
+                <img src="./img/breakwhile.JPG"><br><br>
+                <img src="./img/breakwhile2.JPG"><br><br>
+                <b>Using pass stmt with while loop:</b><br><br>
+               <img src="./img/passwhile.JPG"><br><br>
+               <b>A guessing game using while loop.</b><br><br>
+               <img src="./img/guesswhile.JPG"><br><br><br><br><br><br>
+               <span>2.for loop:</span><br><br>
+               1)for loop is used to iterating the statements using range() function.<br><br>
+               <b>range():</b> The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.<br><br>
+               It takes following parameters.<br>
+               1)Start value ----> Optional, An integer number specifying at which position to start. Default is 0<br>
+               2)Stop value ----> Required. An integer number specifying at which position to stop (not included).<br>
+               3)Step value ----> 	Optional. An integer number specifying the incrementation. Default is 1.<br><br>
+               <img src="./img/range().JPG"><br><br>
+               <b>Using range() in for loop:</b><br>
+               <img src="./img/forwithrange.JPG"><br><br>
+               • Within for loop statements are Indented by 4 spaces.<br>
+               <b>Using step with range() in for loop:</b><br>
+               <img src="./img/stepwithrange.JPG"><br><br>
+               • Within for loop statements are Indented by 4 spaces.<br>
+               <b>Using else with for loop:</b><br>
+               <img src="./img/elsewithfor.JPG"><br><br>
+               • Within for loop statements are Indented by 4 spaces.<br>
+               <b>loop control statements with continue :</b><br>
+               <img src="./img/continuewithfor.JPG"><br><br>
+               <span>loop control statements with break:</span><br>
+               <img src="./img/breakfor.JPG"><br><br>
+               <b>loop control statements with pass:</b><BR>
+                <img src="./img/passfor.JPG"><br><br>
+                <b>Basic example(Factorial of given number) using for loop:</b><br>
+                <img src="./img/factfor.JPG"><br><br>
+                <b>Python Program to show range() basics printing a number:</b><br>
+                <img src="./img/range.JPG">
+                
+
+
+
+
+
+
+
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

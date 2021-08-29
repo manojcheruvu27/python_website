@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>DataBase Handling</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>DataBase Handling</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li><a href="./Functions.html">8.Functions</a></li>
+                <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li><a href="./lambdas.html">12.lambdas</a></li>
+                <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li class="current"><a href="./sql.html">17.Database_Management</a></li>
+                
+            </ul>
+            
+            
+        
+        
+            <p>    
+                <span>DataBase management:</span><br><br>
+                1)It is a procedure in which huge data can be stored and processed efficiently.<br>
+                2)It stores the data in the form of tables(SQL) or collections(No SQL).<br>
+                3)Database has functionalities like creating,updating,dropping tables.<br>
+                4)Data bases are classified as SQL and NOSQL.<br><br><br><br>
+                <img src="./img/sqlvsnosql.JPG"><br><br>
+                5)In this section, we are going to connect both sql(MYSQL) and nosql(MongoDB) databases to python and perform operations like creating,updating... tables.<br><br><br>
+                <span>Connecting SQL(MYSQL) Database to python:</span> <br><br>
+                <b>Methods used for connecting to MYSQL:</b><br><br>
+                connect(): This function sets up the connection to the specified database server.<br>
+                cursor(): This function instantiates and returns a cursor.<br>
+                config(): This function allows us to configure the connection.<br>
+                is_connected(): This function checks whether the connection to database server is available or not.<br>
+                reconnect(): This function will attempt to reconnect to the database server.<br>
+                disconnect(): This function disconnects from the database server<br>
+                commit(): This function will commit the current transaction.<br>
+                rollback(): This function will rollback the current transaction.<br>
+                set_autocommit(): This function can be used to enable the commit automatically.<br>
+                fetchone(): This function returns the next row of a query result set or None.<br>
+                fetchall(): This function returns all the rows available in the database table.<br>
+                fetchmany(): This function returns n rows from the database table.<br><br><br>
+
+               <b> Program: to connect to a database</b><br><br>
+                import mysql.connector<br>
+                from mysql.connector import Error<br>
+                def connect():<br>
+                &emsp;&emsp;    """ Connecting to MySQL database """<br>
+                &emsp;&emsp;    try:<br>
+                &emsp;&emsp;&emsp;&emsp;        db = mysql.connector. connect(host="127.0.0.1",user="root",passwd="root",db="name_of_db")<br>
+                &emsp;&emsp;&emsp;&emsp;        if db.is_connected():<br>
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;            print('Connected to MySQL database')<br>
+                &emsp;&emsp;    except Error as e:<br>
+                &emsp;&emsp;&emsp;&emsp;        print(e)<br>
+                &emsp;&emsp;    finally:<br>
+                &emsp;&emsp;&emsp;&emsp;        db.close()<br>
+                if __name__ == '__main__':<br>
+                &emsp;&emsp;    connect()<br><br><br>
+
+              <b> Program: to insert a record into a database</b> <br>
+                import mysql.connector as my<br>
+                db = my.connect(host="127.0.0.1",user="root",passwd="root",db="name_of_db")<br>
+                print(db)<br>
+                cursor = db.cursor()<br>
+                print(cursor)<br>
+                cursor.execute("insert into student values(17,'abcd')");<br>
+                print(cursor.rowcount, "record inserted.")<br>
+                db.commit()<br>
+                db.close()<br><br><br>
+             <b>  Program: to insert a record into a database</b> <br>
+                import mysql.connector as my<br>
+                db = my.connect(host="localhost",user="root",passwd="root",db="name_of_db")<br>
+                cursor = db.cursor()<br>
+                cursor.execute("insert into student values(18,'asdf')");<br>
+                print(cursor.rowcount, "record inserted.")<br>
+                db.commit()<br>
+                db.close()<br><br><br>
+            <b>  Program: to retrieve a record from a database</b>  <br>
+                import mysql.connector as my<br>
+                db = my.connect(host="127.0.0.1",user="root",passwd="root",db="name_of_db")<br>
+                cursor = db.cursor()<br>
+                number_of_rows = cursor.execute("select * from student");<br>
+                result = cursor.fetchone()<br>
+                print(result)<br>
+                db.close()<br><br><br>
+             <b> Program: to retrieve a record from a database</b>  <br>
+                import mysql.connector as my<br>
+                db = my.connect(host="127.0.0.1",user="root",passwd="root",db="name_of_db")<br>
+                cursor = db.cursor()<br>
+                number_of_rows = cursor.execute("select * from student");<br>
+                row = cursor.fetchone()<br>
+                while row is not None:<br>
+                &emsp;&emsp;    print(row)<br>
+                &emsp;&emsp;    row = cursor.fetchone()<br><br><br>
+            <b>   Program: to retrieve all records from a database</b> <br>
+                import mysql.connector as my<br>
+                db = my.connect(host="127.0.0.1",user="root",passwd="root",db="name_of_db")<br>
+                cursor = db.cursor()<br>
+                number_of_rows = cursor.execute("select * from student");<br>
+                result = cursor.fetchall()<br>
+                print(result)<br>
+                for row in result:<br>
+                &emsp;&emsp;    print(row)<br>
+                db.commit()<br>
+                db.close()<br>
+
+
+
+                <span>Connecting NOSQL(MongoDB) to python:</span><br><br>
+                <span>Prerequisite-MongoDB:</span><br><br>
+              1)  In sql we store data in the form of tables, Here we call it as collections.<br>
+              2)In sql we have tuples(rows), Here we call it documents.<br>
+              3)Data is stored in the form of JSON format.<br>
+              4)Keyvalue pairs enclosed in { } is known as JSON format.<br>
+              Example:<br>
+              {"name" : "Manoj", "age":19, "Address":"Hyderabad"}<br><br>
+              <b>Installation of MongoDB:</b><br><br><br>
+              <a href="https://docs.mongodb.com/manual/installation/">Install MongoDB</a><br><br>
+              To connect python to SQL we need to install a pre defined module called pymongo.<br><br>
+              <b>Steps for installing pymongo:</b><br><br>
+              1)Step 1: Open command prompt.<br>
+              2)Step 2:Type the following command: pip install pymongo<br><br>
+              we can import pymongo in our program by using import keyword as it is a module.<br><br>
+              <b>Prorgram: For connecting to MongoDB and Creating a database:</b><br><br>
+                import pymongo<br><br>
+
+                myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br><br>
+
+                mydb = myclient["exampledatabase"]<br><br><br><br>
+                <b>Check if database exist:</b><br><br>
+                It can be achieved in 2 ways.<br><br>
+                Method 1: Return your list of databases. and check if created database exist.<br>
+                print(myclient.list_database_names())<br>
+                <br><br>
+                Method2:Check if "exampledatabase" exists:<br><br>
+                dblist = myclient.list_database_names()<br>
+                if "mydatabase" in dblist:<br>
+                &emsp;&emsp;     print("The database exists.")<br><br><br>
+                <b>Creating a collection:</b><br>
+                import pymongo<br>
+
+                myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+                mydb = myclient["exampledatabase"]<br>
+
+                collection = mydb["employees"]<br><br><br>
+                <b>Check if collection exist:</b><br><br>
+                This can be achieved in 2 ways:<br><br>
+                Method1:Return list of names of all collections<br>
+                print(mydb.list_collection_names())<br><br><br>
+                Method2:Check if collection "employees" exist.<br>
+                collection_list = mydb.list_collection_names()<br>
+                if "employees" in collection_list:<br>
+                &emsp;&emsp;    print("The collection exists.")<br><br><br>
+                <span>Inserting Documents into employees collection:</span><br>
+                In MongoDB, By using insertOne() we can insert one Document, whereas by using insertMany() we can insert multiple records.<br>
+                <br>
+                import pymongo<br>
+
+                myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+                mydb = myclient["exampledatabase"]<br>
+                collection = mydb["employees"]<br>
+
+                dict = { "name": "xyz", "address": "Banglore" }<br>
+
+                x = collection.insert_one(dict)<br><br><br>
+                <b>_id in MongoDB:</b><br>
+                In MYSQL, user defines primary key which is helpful in identifying records uniquely, but in MongoDB the data is unstructured so one attribute cannot act as primary key.<br>
+                So MongoDB, assigns _id automatically that acts as primary key.<br>
+                Now let us insert a document and return its _id.<br><br>
+                import pymongo<br>
+
+                myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+                mydb = myclient["exampledatabase"]<br>
+                collection = mydb["employees"]<br>
+                mydict = { "name": "xyz", "address": "chennai" }<br>
+
+                x = collection.insert_one(mydict)<br>
+
+                print(x.inserted_id)<br><br><br>
+                <b>Inserting multiple documents into collection and return their _id's:</b><br><br>
+                import pymongo<br>
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+mydb = myclient["exampledatabase"]<br>
+collection = mydb["employees"]<br>
+
+mylist = [<br>
+  { "name": "a", "address": "Mumbai"},<br>
+  { "name": "b", "address": "Delhi"},<br>
+  { "name": "c", "address": "Kolkata"},<br>
+  { "name": "d", "address": "Rajasthan"},<br>
+  { "name": "e", "address": "Bihar"},<br>
+  { "name": "f", "address": "Hyderabad"},<br>
+  { "name": "g", "address": "Hyderabad"},<br>
+  { "name": "h", "address": "Banglore"},<br>
+  { "name": "i", "address": "Chennai"},<br>
+  { "name": "j", "address": "Banglore"},<br>
+  { "name": "k", "address": "Kerala"},<br>
+  { "name": "l", "address": "Hyderabad"}<br>
+]
+
+x = collection.insert_many(mylist)<br>
+
+#print list of the _id values of the inserted documents:<br>
+print(x.inserted_ids)<br><br><br>
+<b>Find():</b><br><br>
+Find in Mongodb is like select in MySQL.<br>
+The find_one() method returns the first occurrence in the selection.<br><br>
+import pymongo<br>
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+mydb = myclient["exampledatabase"]<br>
+collection = mydb["employees"]<br>
+
+x = collection.find_one() &emsp;&emsp; #As we are not passing anything in find_one() we are retriving first document<br><br> 
+
+print(x)<br><br><br>
+<b>Program for performing select * operation in MongoDB:</b><br><br>
+import pymongo<br>
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+mydb = myclient["exampledatabase"]<br>
+collection = mydb["employees"]<br>
+
+for x in collection.find():<br>
+&emsp;&emsp;  print(x)<br><br><br>
+Say, while returning the document, you dont want _id and address , you want only the name of the employee.<br><br>
+import pymongo<br>
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+mydb = myclient["exampledatabase"]<br>
+collection = mydb["employees"]<br>
+
+for x in collection.find({},{ "_id": 0, "name": 1, "address": 0 }):<br>
+&emsp;&emsp;  print(x)<br><br>
+<span>Queriying :</span><br><br>
+Find employees from Hyderabad.<br><br>
+import pymongo<br>
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+mydb = myclient["exampledatabase"]<br>
+collection = mydb["employees"]<br>
+
+query = { "address": "Hyderabad" }<br>
+
+required_document = collection.find(query)<br>
+
+for x in required_document:<br>
+&emsp;&emsp;   print(x)<br><br><br>
+For Advanced queriying techniques, refer MongoDB Documentation.<br><br><br>
+<span>Deleting Documents:</span><br><br>
+To delete documents with address Kerala.<br>
+import pymongo<br>
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+mydb = myclient["exampledatabase"]<br>
+collection = mydb["employees"]<br>
+
+query = { "address": "Kerala" }<br>
+
+collection.delete_one(query)<br><br><br>
+<b>To delete Multiple documents</b><br>
+To delete all the documents whose address starts with letter "K"<br>
+import pymongo<br>
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+mydb = myclient["exampledatabase"]<br>
+collection = mydb["employees"]<br>
+
+query = { "address": {"$regex": "^K"} }<br>
+
+x = collection.delete_many(query)<br>
+
+print(x.deleted_count, " documents deleted.")<br><br><br>
+<span>To drop a collection:</span><br><br>
+import pymongo<br>
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+mydb = myclient["exampledatabase"]<br>
+collection = mydb["employees"]<br>
+
+collection.drop()<br><br><br><br>
+<span>Update Collection:</span><br><br>
+If one document needs to be updated, use update_one() else use update_many().<br><br>
+<b>Example of update_one():</b>
+<br>
+To change address from chnnai to banglore of first instance.<br><br>
+import pymongo<br>
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+mydb = myclient["exampledatabase"]<br>
+collection = mydb["employees"]<br>
+
+query = { "address": "Chennai" }<br>
+newvalues = { "$set": { "address": "Banglore" } }<br>
+
+collection.update_one(query, newvalues)<br>
+
+#print "employees" after the update:<br>
+for x in collection.find():<br>
+&emsp;&emsp;  print(x)<br><br><br>
+<b>Updating multiple documents using update_many():</b><br><br>
+updating all the documents whose address starts with D to Agra<br><br>
+import pymongo<br>
+
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")<br>
+mydb = myclient["exampledatabase"]<br>
+collection = mydb["employees"]<br>
+
+query = { "address": { "$regex": "^D" } }<br>
+newvalues = { "$set": { "name": "Agra" } }<br>
+
+x = collection.update_many(query, newvalues)<br>
+
+print(x.modified_count, "documents updated.")<br><br>
+
+
+
+
+
+
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>
+

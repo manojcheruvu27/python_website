@@ -1,0 +1,27 @@
+/* Style the links inside the sidenav */
+.intro {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+.intro p {
+    width: 100vw;
+    padding-left: 0;
+    margin-left: 0;
+    
+    
+}
+.intro ul{
+    height: 40vh;
+    width: 100vw;
+    scroll-behavior: smooth;
+    
+}
+footer{
+    display: none;
+    
+}
+header{
+    display: none;
+}
+

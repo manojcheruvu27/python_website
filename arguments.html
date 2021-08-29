@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Arguments</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>8.1 Arguments</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li><a href="./Functions.html">8.Functions</a></li>
+                <li class="current"><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li><a href="./lambdas.html">12.lambdas</a></li>
+                <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li><a href="./sql.html">17.Database_Management</a></li>
+                
+            </ul>
+            
+            
+        
+        
+            <p>  <span>Arguments:</span><br>
+                • The data we send during the function call to the function is termed as arguments.<br>
+                • There are 5 types of arguments.<br>
+                1)Positional arguments.<br>
+                2)Keyword arguments.<br>
+                3)Default arguments.<br>
+                4)Variable arguments.<br>
+                5)Keyword variable arguments.<br><br><br>
+                <b>1)Positional arguments:</b><br>
+                •  The number of arguments we pass must match the number of parameters that function accept.<br>
+                • The first argument is assigned to first parameter, Second argument to the secon parameter so on.<br>
+                • The order of the arguments is important.<br><br>
+                <img src="./img/posarg1.JPG"><br><br>
+                <b>What happens if we change the order of arguments?</b><br><br>
+                <img src="./img/posarg2.JPG"><br>
+                The output achieved does not make any sense!!.<br>
+                For this reason order is important in positional Arguments.<br><br>
+                <b>What happens if we send the no of arguments less or greater than the no of parameters:</b><br>
+                <img src="./img/posarg3.JPG"><br>
+                We got a traceback, saying that the argument course is missing, so the no of arguments and parameters must match.<br><br>
+                <b>2.Keyword arguments:</b><br>
+                • In positional arguments, we were unable to give the list of parameters in our own order.<br>
+                • To overcome that drawback we use keyword arguments.<br>
+                • In keyword arguments we specify the name of argument while passing it.<br>
+                • As we are specifying the name of the argument, we can pass them in any order.<br>
+                • While calling a function, we can use keyword arguments in combination with positional arguments.<br>
+                • But remember, once we start using keyword arguments, every argument after that will be keyword argument.<br>
+                • That is to the left of keyword argument, it can be positional/Keyword argument but to the right side of keyword argument,all the arguments must be keyword.<br>
+                <b>Example of keyword argument:</b><br>
+                <img src="./img/keyarg1.JPG"><br><br>
+                <b>Using combination of positional and keyword arguments:</b><br><br>
+                <img src="./img/keyarg2.JPG"><br><br>
+                <b>What happens if we use positional arguments after keyword arguments?</b><br><br>
+                <img src="./img/keyarg3.JPG"><br>
+                we got a traceback, saying positional arguments follows keyword arguments.<br><br></br><br>
+                <b>Default Arguments:</b><br>
+                •There are some default values that remain same for all function calls.<br>
+                •For such values, we can declare them at the top.<br>
+                •The value declared remains same through out the function calls if the value is not specified during  function call.
+                •If we specify the value, then the new value overrides the default value.<br><br>
+                <b>Syntax:</b><br>
+                def function_name(para1=value1, para2=value2,para3=value3,....):<br>
+                &emsp;&emsp;statements<br><br>
+                <img src="./img/defaultargs.JPG"><br><br>
+                <b>Variable Arguments:</b><br>
+                • Say, for a student there are 5 subjects and for another there are 6 subjects.<br>
+                • In this case to send marks to function without no of arguments error we use variable arguments.<br><br>
+                <b>Syntax:</b><br>
+                def function_name(*parameter):<br>
+                &emsp;&emsp;    statements<br><br>
+                <img src="./img/variableargs.JPG"><br><br>
+                <b>Keyword variable arguments</b><br>
+                •In variable arguments if we want to pass values then it is keyword variable arguments.<br><br>
+                <img src="./img/keywordvariableargs.JPG"><br>
+
+
+
+
+
+
+
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen adn (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Operators</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Operators</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro">
+
+       
+            <ul>
+
+
+
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li class="current"><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li><a href="./Functions.html">8.Functions</a></li>
+                <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li><a href="./lambdas.html">12.lambdas</a></li>
+                <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li><a href="./sql.html">17.Database_Management</a></li>
+            </ul>
+            
+            
+        
+        
+            <p>  
+            <span>Convenctions:</span><br><br>
+            In an expression, The variables are refered as operands and the operation being performed is termed as operator.<br>
+            Ex: In a + b<br>
+                a , b  -----> operands <br>
+                +      -----> operator<br><br>
+                <span>1)Arithmetic Operators : </span>: 
+                + -----> Perform Addition.
+                - -----> Perform subtraction.
+                * -----> Perform Multiplication.
+                / -----> Perform Division.
+                <br>
+                //  ------> The result of division is rounded off.<br>
+                Ex:<br>
+                <img src="./img/11.JPG"> <br><br>
+                The operation x to the  power of y is carried out using ** operator.<br>
+                Ex:<br>
+                <img src="./img/12.JPG"><br><br>
+                %(modulus) operator is used to compute the remainder.<br>
+                Ex:<br>
+                <img src="./img/13.JPG"><br><br>
+                <img src="./img/arithmetic operators.JPG"><br><br>
+                <span>2)Assignment Operator :</span> To assign a value to a variable or to assign the computed result to the variable.<br><br>
+                =   -----> Used to assign a value to the variable (Ex: x=10).<br>
+                +=  -----> To assign computed sum to a variable.<br>
+                -=  -----> To assign computed subtraction to a variable.<br>
+                *=  -----> To assign computed Multiplication to a variable.<br>
+                /=  -----> To assign computed Division to a variable.<br>
+                //= -----> To assign computed float-division value to a variable.<br>
+                %=  -----> To assign value of remainder to a variable.<br>
+                **= -----> To assign value of x to the power of y to a variable.<br><br>
+                <img src="./img/Assignment operators.JPG"><br><br>
+                <span>3)Unary Operator :</span> - (temp = 23, temp = -23) <br><br>
+                <span>4)Relational operator / conditional operator : </span><br>i)Used for comparing two values.<br>ii)Generally used for evaluation of conditions in conditional statements or loops.<br>iii)Returns either True or False.<br><br>
+                < ---->  Less than.<br>
+                <= ----> Less tahn or equal to.<br>
+                >  ----> Greater than.<br>
+                >= ----> Greater than or equal to. <br>
+                == ----> Equal to (Note: = is used for assignment i.e storing a value in a variable but == is used to check weather two values are equal or not.This returns either true or false.) <br>
+                != ----> Not Equal to.<br>
+                <img src="./img/rel operators.JPG"><br><br>
+                <span>5)Logical operators : </span><br>
+                and ---> False if atleast one is false<br>or --->True if atleast one is true<br>not ---> Compliment/Reverse of given value<br> ->used for combining two conditions<br>
+                <img src="./img/and.JPG"><br><br>
+                <img src="./img/or.JPG"><br><br>
+                <img src="./img/not.JPG"><br><br>
+               <span> 6)Bitwise operator :</span> 
+               ~<br>  &<br>  |<br>  ^ <br> << <br> >><br>
+  If first bit is 0 then number is negative , If first bit is 1 then number is positive<br>
+  a)Negation operator(~)  (tilde) : Coverts 1's to 0's and vice versa (eg : 5 = 00000101 , ~5 = 11111010 )<br>
+     FORMULA : ~x = - (x+1)<br>
+     eg : x=5 , ~x = -6<br>
+  b) & Operator :<br>
+    <img src="./img/&.JPG"><br>
+  eg:  x=5   00000101<br>
+       y=6    0000<br>
+       x&y  0000<br>
+   c) | Operator :<br>
+      <img src="./img/or1.JPG"><br>
+    eg : x=5  00000101 <br>
+         y=6  <br>
+   d) ^<br>
+   e) Left shift(<<) : <br>
+              x = 10            0        0       0       0       1         0        1       0<br>
+              x << 1              0        0       0       1       0         1        0       0        First bit is lost and data is moved left and last bit is replaced  by 0 <br>
+   f)Right shift(>>) : <br>
+              x = 10            0        0       0       0       1         0        1       0 <br>
+              x>>1              0        0        0      0       1         0        1       0        Last bit i lost and data is moved right and first bit is replaced by 0 <br><br>
+              
+<span>7)Membership Operators  :  </span><br> in and notin k/w  (Checking the availability or non availability of data)<br>
+eg :  s1 = 'hi friends'<br>
+      s2 = 'hi'<br>
+      s3 =  'bye'<br>
+      s2 in s1   :   True<br>
+      s3 in s1   :   False<br>
+8)Identify Operators :  is   is not   k/w  (Weather the address is same or not)<br>
+eg : x = 5<br>
+     y = 5<br>
+     z = 6<br>
+     id(x) = 180056344 (Location of x)<br>
+     id(y) = 180056344(Location of y) (As value of y is same as x they are stored in same address)<br>
+     x is y : True<br>
+     z is x : False<br>
+   
+
+
+
+                      
+                  
+
+                
+                                    
+                            </p>
+                        
+                    </div>
+                
+                    
+                </body>
+                
+                </html>
+
+
+
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Iterators_Generators</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Iterators and generators</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li><a href="./Functions.html">8.Functions</a></li>
+                <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li><a href="./lambdas.html">12.lambdas</a></li>
+                <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li class="current"><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li><a href="./sql.html">17.Database_Management</a></li>
+                
+            </ul>
+            
+            
+        
+        
+            <p>  <span> Iterators</span> <br>
+                Iterator is an object that can be iterated upon. An iterator object which will return one element at a time. <br>
+                <br><br>
+               <b> Program: to display the values available in the list</b><br>
+                data = ['abcd','mnop','qwer','xyz']<br>
+                for x in data:<br>
+                &emsp;&emsp;    print(x)<br><br><br>
+               <b> Program: to develop our own iterator to display the values available in the list</b><br>
+                data = ['abcd','mnop','qwer','xyz']<br>
+                for x in data:<br>
+                &emsp;&emsp;     print(x)<br>
+                print(dir(data))<br>
+                itr = iter(data)<br>
+                print(itr)<br>
+                print(next(itr))<br>
+                print(next(itr))<br>
+                print(next(itr))<br>
+                print(next(itr))<br>
+                print(dir(itr))<br><br><br>
+                itr = reversed(data)<br>
+                print(next(itr))<br>
+                print(next(itr))<br>
+                print(next(itr))<br>
+                print(next(itr))<br><br><br>
+                
+                1)Every sequence that we have in python by default contains an iter attribute to iterate through the elements available in the sequence. Every iterator contains a next attribute to get the next element available in the sequence.<br>
+                
+                2)If we want to develop our own iterator, we need to develop a class containing the implementation of __iter__()  and  __next__().<br>
+                
+                3)The __iter__() method must return an object of an iterator itself. <br>
+                4)The __next__() method must return the next element in the sequence. After reaching the end, it must raise StopIteration exception.<br>
+               <b> Program: to develop our own iterator to display the values available in the list</b><br>
+                class Remote:<br>
+                &emsp;&emsp;     def __init__(self):<br>
+                &emsp;&emsp; &emsp;&emsp;         self.channels = ['maa','gemini','star','discovery']<br>
+                &emsp;&emsp; &emsp;&emsp;         self.index = -1<br>
+                &emsp;&emsp;     def __iter__(self):<br>
+                &emsp;&emsp; &emsp;&emsp;         return self<br>
+                &emsp;&emsp;     def __next__(self):<br>
+                &emsp;&emsp; &emsp;&emsp;         self.index += 1<br>
+                &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;         if self.index == len(self.channels):<br>
+                &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;             raise StopIteration<br>
+                &emsp;&emsp; &emsp;&emsp;         return self.channels[self.index]<br>
+                r = Remote()<br>
+                itr = iter(r)<br>
+                print(next(itr))<br>
+                print(next(itr))<br>
+                print(next(itr))<br>
+                print(next(itr))<br><br><br><br>
+                
+               <b> Program: to develop our own iterator to display the first ten values</b><br>
+                class FirstTenValues:<br>
+                &emsp;&emsp;     def __init__(self):<br>
+                &emsp;&emsp; &emsp;&emsp;         self.num = 0<br>
+                &emsp;&emsp;     def __iter__(self):<br>
+                &emsp;&emsp; &emsp;&emsp;         return self<br>
+                &emsp;&emsp;     def __next__(self):<br>
+                &emsp;&emsp; &emsp;&emsp;         self.num += 1<br>
+                &emsp;&emsp; &emsp;&emsp;         if self.num > 10:<br>
+                &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;             raise StopIteration<br>
+                &emsp;&emsp; &emsp;&emsp;         return self.num<br>
+                values = FirstTenValues()<br>
+                for x in values:<br>
+                &emsp;&emsp;     print(x)<br><br><br>
+                
+               <span> Generators</span><br>
+               1) Generator is a function with yield statement instead of a return statement.<br>2) If a function contains at least one yield statement, it becomes a generator function. <br>
+               3) Both yield and return will return some value from a function.<br>4) The difference is that a return statement terminates the function where as a yield statement pauses the function saving all its data and later on continues from there on the next call.<br>
+               5) Generators are a simple way of creating iterators.<br>6) A generator is a function that returns an iterator which we can iterate and return one value at a time.<br>
+               7) Generators will improve the performance of the application.<br><br><br>
+                
+              <b>  Program: to generate multiple string values using generator</b><br>
+                def languages():<br>
+                &emsp;&emsp;     yield 'java'<br>
+                &emsp;&emsp;     yield 'python'<br>
+                &emsp;&emsp;     yield '.net'<br>
+                &emsp;&emsp;     yield 'scala'<br>
+                &emsp;&emsp;     yield 'sas'<br>
+                l = languages()<br>
+                print(next(l))<br>
+                print(next(l))<br>
+                print(next(l))<br>
+                print(next(l))<br>
+                print(next(l))<br><br><br>
+                
+              <b>  Program: to generate multiple string values using generator</b><br>
+                def languages():<br>
+                &emsp;&emsp;     yield 'python'<br>
+                &emsp;&emsp;     yield '.net'<br>
+                &emsp;&emsp;     yield 'scala'<br>
+                &emsp;&emsp;     yield 'sas'<br>
+                l = languages()<br>
+                for x in l:<br>
+                &emsp;&emsp;     print(x)<br><br><br>
+                
+               <b> Program: to generate first ten values using generator</b><br>
+                def first_ten_values():<br>
+                &emsp;&emsp;     n = 1<br>
+                &emsp;&emsp;     while n<=10:<br>
+                &emsp;&emsp; &emsp;&emsp;         yield n<br>
+                &emsp;&emsp; &emsp;&emsp;         n = n + 1<br>
+                for x in first_ten_values():<br>
+                &emsp;&emsp;     print(x)<br><br><br>
+                
+               <b> Program: to generate first twenty values using generator</b><br>
+                def first_ten_values():<br>
+                &emsp;&emsp;     n = 1<br>
+                &emsp;&emsp;     while n<=20:<br>
+                &emsp;&emsp; &emsp;&emsp;         yield n<br>
+                &emsp;&emsp; &emsp;&emsp;         n = n + 1<br>
+                values = first_ten_values()<br>
+                for x in values:<br>
+                &emsp;&emsp;     print(x)<br><br><br>
+                
+               <b> Program: to generate Fibonacci series using generator</b><br>
+                def fibonacci():<br>
+                &emsp;&emsp;      n1 = 0<br>
+                &emsp;&emsp;      n2 = 1<br>
+                &emsp;&emsp;      count = 0<br>
+                &emsp;&emsp;      while count<=10:<br>
+                &emsp;&emsp;  &emsp;&emsp;          yield n1<br>
+                &emsp;&emsp;  &emsp;&emsp;          n1, n2 = n2, n1+n2<br>
+                &emsp;&emsp;  &emsp;&emsp;          count = count + 1<br>
+                values = fibonacci()<br>
+                for x in values:<br>
+                &emsp;&emsp;      print(x)<br>
+
+
+             <span>  Deep Copying and Shallow Copying</span><br>
+Using the = operator we can copy a list into another list. When we are copying a list into another list by using =, it will not create another list instead both will refer to the same list.<br><br>
+<b>Program: to implement copying of a list into another list</b><br>
+first_list = [1, 2, 3, 4, 5, 6]  <br>                                     
+second_list = first_list        <br>
+<img src="./img/dcsc1.JPG"><br><br>                                
+print('First List :', first_list)<br>
+print('Second List :', second_list)<br>
+print('ID of First List :', id(first_list))<br>
+print('ID of Second List :', id(second_list))<br>   
+first_list[2] = 8                   <br>                                        
+print('First List :', first_list)  <br>                              
+<img src="./img/dcsc2.JPG"><br><br><br>
+print('Second List :', second_list)<br>
+print('ID of First List :', id(first_list))<br>
+print('ID of Second List :', id(second_list))<br>
+second_list[2] = 9                  <br>                                   
+print('First List :', first_list)     <br>                           
+<img src="./img/dcsc3.JPG"><br><br><br>
+print('Second List :', second_list)<br>
+print('ID of First List :', id(first_list))<br>
+print('ID of Second List :', id(second_list))<br><br><br>
+
+Output:<br>
+First List : [1, 2, 3, 4, 5, 6]<br>
+Second List : [1, 2, 3, 4, 5, 6]<br>
+ID of First List : 49599832<br>
+ID of Second List : 49599832<br>
+First List : [1, 2, 8, 4, 5, 6]<br>
+Second List : [1, 2, 8, 4, 5, 6]<br>
+ID of First List : 49599832<br>
+ID of Second List : 49599832<br>
+First List : [1, 2, 9, 4, 5, 6]<br>
+Second List : [1, 2, 9, 4, 5, 6]<br>
+ID of First List : 49599832<br>
+ID of Second List : 49599832<br><br><br><br>
+
+Using the = operator we can even copy a nested list into another nested list. When we are copying a nested list into another nested list by using =, it will not create another nested list instead both will refer to the same nested list.<br>
+<b>Program: to implement copying of a list into another list</b><br>
+first_list = [ [1, 2], [3, 4], [5, 6] ]   <br>                              
+second_list = first_list           <br>                                  
+<img src="./img/dcsc4.JPG"><br><br>
+print('First List :', first_list)<br>
+print('Second List :', second_list)<br>
+print('ID of First List :', id(first_list))<br>
+print('ID of Second List :', id(second_list))<br>
+first_list[2][0] = 8          <br><br><br>
+<img src="./img/dcsc5.JPG"><br><br>                                                  
+print('First List :', first_list)      <br>                               
+print('Second List :', second_list)<br>
+print('ID of First List :', id(first_list))<br>
+print('ID of Second List :', id(second_list))<br><br>
+<img src="./img/dcsc6.JPG"><br><br>
+
+second_list[2][1] = 9       <br>                                               
+print('First List :', first_list) <br>                                    
+print('Second List :', second_list)<br>
+print('ID of First List :', id(first_list))<br>
+print('ID of Second List :', id(second_list))<br><br>
+
+Output:<br>
+First List : [[1, 2], [3, 4], [5, 6]]<br>
+Second List : [[1, 2], [3, 4], [5, 6]]<br>
+ID of First List : 57070896<br>
+ID of Second List : 57070896<br>
+First List : [[1, 2], [3, 4], [8, 6]] <br>
+Second List : [[1, 2], [3, 4], [8, 6]]<br>
+ID of First List : 57070896<br>
+ID of Second List : 57070896<br>
+First List : [[1, 2], [3, 4], [8, 9]]<br>
+Second List : [[1, 2], [3, 4], [8, 9]] <br>
+ID of First List : 57070896<br>
+ID of Second List : 57070896<br><br><br><br>
+Sometimes we want to have the values in the original list unchanged and modify only the values in the new list or vice versa in such case there are two ways to create duplicates copies.<br>
+1)Shallow Copy<br>
+2)Deep Copy<br>
+To perform shallow copy or deep copy we need to use copy module. To show shallow and deep copy we need to have nested lists.<br><br>
+<b>Shallow Copy:</b>  To perform shallow copying we need to use copy() available in copy module.<br> 
+In shallow copy it does not create a duplicate copy of nested objects, instead it just copies the reference of nested objects.<br>
+
+<b>Program: to implement shallow copy</b><br><br>
+import copy            <br>                                                         
+first_list = [1, 2, [3, 4], 5]    <br>            
+second_list = copy.copy(first_list)<br> <br> 
+<img src="./img/sc1.JPG"><br><br>
+print('First List :', first_list)<br>
+print('Second List :', second_list)<br>
+print('ID of First List :', id(first_list))    <br>                  
+print('ID of Second List :', id(second_list)) <br>   <br> 
+<img src="./img/sc2.JPG"><br><br>      
+ 
+first_list[2][0] = 6  <br>                                                            
+first_list.append(7) <br>              
+ 
+print('First List :', first_list)<br> 
+print('Second List :', second_list)<br> 
+print('ID of First List :', id(first_list))    <br>                    
+print('ID of Second List :', id(second_list))   <br><br> 
+<img src="./img/sc3.JPG"><br><br>          
+
+first_list[1] = 8        <br>                                                          
+              
+print('First List :', first_list)<br> 
+print('Second List :', second_list)<br> 
+print('ID of First List :', id(first_list))<br> 
+print('ID of Second List :', id(second_list))<br> <br> <br>                        
+                                                                                       
+
+Output:<br> 
+First List : [1, 2, [3, 4], 5]<br> 
+Second List : [1, 2, [3, 4], 5]<br> 
+ID of First List : 46061008<br> 
+ID of Second List : 46061088<br> 
+First List : [1, 2, [6, 4], 5, 7]<br> 
+Second List : [1, 2, [6, 4], 5]<br> 
+ID of First List : 46061008<br> 
+ID of Second List : 46061088<br> 
+First List : [1, 8, [6, 4], 5, 7]<br> 
+Second List : [1, 2, [6, 4], 5]<br> 
+ID of First List : 46061008<br> 
+ID of Second List : 46061088<br> <br> <br> 
+
+<b>Deep Copy:</b>  To perform deep copying we need to use deepcopy() available in copy module. <br> 
+In deep copy it creates a duplicate copy of nested objects also.<br> <br> 
+
+<b>Program: to implement deep copy</b><br> 
+import copy                   <br>                                                  
+<img src="./img/dc1.JPG"><br><br>
+first_list = [1, 2, [3, 4], 5]<br>                
+second_list = copy.deepcopy(first_list)<br>
+print('First List :', first_list)<br>
+print('Second List :', second_list)<br>
+print('ID of First List :', id(first_list)) <br>                    
+print('ID of Second List :', id(second_list)) <br>  <br>
+<img src="./img/dc2.JPG"><br><br>
+<img src="./img/dc3.JPG"><br><br>     
+
+
+
+ 
+first_list[2][0] = 6   <br>                                                           
+first_list.append(7) <br>              
+ 
+print('First List :', first_list)<br> 
+print('Second List :', second_list)<br> 
+print('ID of First List :', id(first_list)) <br>                       
+print('ID of Second List :', id(second_list)) <br>    
+<img src="./img/dc4.JPG"><br><br>        
+                                                                                       
+
+
+
+
+
+first_list[1] = 8  <br>                                                                 
+              
+print('First List :', first_list)<br> 
+print('Second List :', second_list)<br> 
+print('ID of First List :', id(first_list))<br> 
+print('ID of Second List :', id(second_list)) <br> <br> <br>                       
+                                                                                      
+
+
+Output:<br> 
+First List : [1, 2, [3, 4], 5]<br> 
+Second List : [1, 2, [3, 4], 5]<br> 
+ID of First List : 58971520<br> 
+ID of Second List : 58971600<br> 
+First List : [1, 2, [6, 4], 5, 7]<br> 
+Second List : [1, 2, [3, 4], 5]<br> 
+ID of First List : 58971520<br> 
+ID of Second List : 58971600<br> 
+First List : [1, 8, [6, 4], 5, 7]<br> 
+Second List : [1, 2, [3, 4], 5]<br> 
+ID of First List : 58971520<br> 
+ID of Second List : 58971600<br> 
+
+
+
+
+
+                
+                
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

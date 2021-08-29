@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Functions</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Functions</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li class="current"><a href="./Functions.html">8.Functions</a></li>
+                <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li><a href="./lambdas.html">12.lambdas</a></li>
+                <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li><a href="./sql.html">17.Database_Management</a></li>
+                
+            </ul>
+            
+            
+        
+        
+            <p>   <span>Why should we use functions?</span><br><br>
+                • Say we have a bunch of statements that needs to be executed again and again.<br>
+                • Instead of writing that piece of code repeatedly we can put them together, give it a label and just call the name for them to execute.
+                <br>
+                • We pass the data in a parentheses namely parameters.<br>
+                <b>Functions Syntax: </b> <br><br>
+                def function_name(parameters):<br>
+                &emsp;&emsp; statement1<br>
+                &emsp;&emsp; statement2<br>
+                &emsp;&emsp; ....<br>
+                &emsp;&emsp; statementn<br>
+                &emsp;&emsp; return values<br><br>
+                •statements within function are Indented with 4 spaces.<br>
+
+                <span>Arguments:</span><br>
+                •Data we pass to the function while calling it.<br>
+                <b>Parameters or Arguments?</b><br><br>
+                The terms parameter and argument can be used for the same thing: information that are passed into a function.<br>
+
+                
+
+                A parameter is the variable listed inside the parentheses in the function definition.<br>
+
+                An argument is the value that are sent to the function when it is called.<br>
+                Example:<br>
+                <img src="./img/paramvsarg.JPG"><br><br>
+                <b>Some important workflow you need to consider while using the functions:</b><br><br>
+                1) function name can be any valid python identifier.<br>
+                2) parameters are optional.<br>
+                3) any number of parameters (arguments) (0,1,2,3,...),<br>
+                4) function can contain any number of statements.<br>
+                5) function cannot be empty.<br>
+                6) if do not want to specify any statement, then specify pass.<br>
+                7) specifying the return statement is optional.<br>
+                8) using the return statement we can return any number of values(1,2,3,4,...).<br>
+                9) if we are not returning any value, then it will automatically return None.<br>
+                **10) function will execute only when we call the function.<br>
+                <b>Syntax for calling a function.</b><br>
+                function_name()<br><br>
+                11)Function can be called only after it's function definition,otherwise a syntactical error is arose.<br>
+                <img src="./img/callafterdef.JPG"><br><br>
+                <b>Different ways in which you can write a function:</b><br><br>
+                1) function without parameters and without return values.<br>
+                2) function with parameters and without return values.<br>
+                3) function without parameters and with return values.<br>
+                4) function with parameters and with return values.<br><br>
+                <b>1)Function without parameters and without return values.</b><br>
+                • In this case,to perform computations the data needs to be hardcoded/dynamiclly(taking as input) taken withing the function, meaning we need to initialize the data(eg. a = 10) as we are not sending the data withing parentheses as there are no parameters.<br>
+                Examples for functions with no parameters and noreturn values.<br>
+                <img src="./img/noparamnoret1.JPG"><br><br>
+                <img src="./img/noparamnoret2.JPG"><br><br>
+                <b>2)Function with paramerters and without return values.</b><br>
+                • In this case the data need not be hardcoded/taking input within the function, infact we pass it as argument during function call.<br>
+                <img src="./img/paramnoret.JPG"><br>
+                <img src="./img/paramnoret1.JPG"><br><br>
+                <b>3)Function without parameters and with return values:</b><br>
+                •AS there are no parameters data needs to be hardcoded/dynamically take within the function.<br>
+                <img src="./img/noparamret.JPG"><br>
+                <img src="./img/noparamret2.JPG"><br>
+                <img src="./img/noparamret3.JPG"><br>
+                <b>4)Function with parameters and return values:</b><br>
+                •As there are parameters we can take the data outside of the function and pass them as arguments.<br>
+                <img src="./img/paramandret.JPG"><br><br>
+                <b>Basic calculator using functions:</b><br>
+                <img src="./img/calcusingfun.JPG"><br><br>
+                <b>Finding factorial of a given number in all 4 styles:</b><br>
+                <img src="./img/fact1.JPG"><br>
+                <img src="./img/fact2.JPG"><br>
+                <img src="./img/fact3.JPG"><br>
+                <img src="./img/fact4.JPG"><br><br>
+                <b>Recursion:</b><br>
+                A function calling itself is termed as recursion.<br>
+                <img src="./img/factrecursion.JPG"><br><br>
+                
+
+
+
+
+
+
+
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

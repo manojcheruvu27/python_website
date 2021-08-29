@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Multi_Threading</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Multi Threading</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li><a href="./Functions.html">8.Functions</a></li>
+                <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li><a href="./lambdas.html">12.lambdas</a></li>
+                <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li class="current"><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li><a href="./sql.html">17.Database_Management</a></li>
+            </ul>
+            
+            
+        
+        
+            <p> <span>  MultiThreading</span><br><br>
+               <b>Single tasking:</b>  The process of executing a single task at a time is called as single tasking. In single tasking much of the processor time is wasted.<br>
+                Ex: DOS<br>
+               <b> Multi tasking:</b> The process of executing multiple tasks at the same time is called as multitasking. In multitasking the processor time is utilized in an optimum way. <br>
+                Ex: Windows<br>
+                The process of loading and unloading the process into the memory is called as context switching. In multitasking, the processor time is divided among the tasks that are executed. The small amount of processor time that is given to a particular task for execution is called as time slice. <br>
+               <b>Advantage of multitasking:</b> Using multitasking we reduce the waiting time and improve the response time and thereby improving the performance of the application.<br>
+                Multitasking is of two types. They are:<br>
+                1)Process based multitasking<br>
+                2)Thread based multitasking<br><br>
+               <b>Process based multitasking:</b> The process  of executing different processes simultaneously at the same time is called as process based multitasking. Every process is independent of each other. Every process contains its own set of resources. Process based multitasking is an operating system approach.<br>
+                Ex: writing java program, down loading s/w, listening music, copying s/w etc.<br>
+               <b> Thread based multitasking:</b> The process of executing different parts of the same process simultaneously at the same time is called as thread based multitasking. The different parts may be dependent or independent of each other but they share the same set of resources. Thread based multitasking is a programmatic approach. <br>
+                Ex: games, web applications etc.<br>
+               <b> Multithreading:</b> The process of executing multiple threads at the same time is called as multi threading or thread based multitasking. If the application contains multiple threads then the application is said to be multithreaded.<br>
+               <b>Thread:</b> A thread is a separate piece of code which will be executed separately.<br>
+               <b> Program:to get the details of the current thread</b><br><br><br>
+                import threading<br>
+                print('current thread :', threading.current_thread().getName())	<br>
+                output: current thread : MainThread<br><br><br>
+                
+               1) Every python program will by default contain one thread called as MainThread, which is used for executing the python program.<br>
+               2) We can get the information of the currently executing thread by using current_thread(). current_thread() is a function available in threading module and it provides the information of the currently executing thread.<br>
+               3) The python program contains a MainThread by default. If we want our program to contain multiple threads then we have to create our own threads called user defined threads. The threads that are created by the user or the programmer are called as user defined threads. We can create any number of user defined threads.<br>
+               4) The user defined thread can be created in 3 ways.<br>
+                i)By inheriting Thread class<br>
+                ii)Without inheriting Thread class<br>
+                iii)Without using any class<br><br><br><br>
+                
+                <b>Procedure to create an user defined thread by inheriting Thread class</b><br>
+                1)Declare a class, which is inheriting from the Thread class.<br>
+                2)Specify the functionality of user defined thread in run().<br>
+                3)Create an object of that class which is inheriting Thread class.<br>
+                4)Execute the functionality of the user defined thread available in run() by using start().<br><br>
+                
+              <b> Program: to create userdefined thread</b><br>
+                from threading import *<br>
+                class MyThread(Thread):<br>
+                &emsp;&emsp;     def run(self):<br>
+                &emsp;&emsp;  &emsp;&emsp;         print('userdefined thread')<br>
+                t = MyThread()<br>
+                t.start()<br><br><br>
+               <b> Procedure to create an user defined thread without inheriting Thread class</b>
+                1)Declare a class.<br>
+                2)Specify the functionality of user defined thread in any method.<br>
+                3)Create an object of that class which contains the thread functionality.<br>
+                4)Create an object of Thread class by specifying the target. <br>
+                5)Execute the functionality of the user defined by using start().<br><br><br>
+                
+               <b> Program: to create userdefined thread</b><br>
+                from threading import *<br>
+                class MyThread:<br>
+                &emsp;&emsp;    def show(self):<br>
+                &emsp;&emsp; &emsp;&emsp;        print('userdefined thread')<br>
+                mt = MyThread()<br>
+                t = Thread(target=mt.show)<br>
+                t.start()<br><br><br>
+               <b> Procedure to create an user defined thread without using any class</b><br>
+                1)Specify the functionality of userdefined thread in any function.<br>
+                2)Create an object of Thread class by specifying the target. <br>
+                3)Execute the functionality of the userdefined by using start().<br><br>
+                
+               <b> Program: to create userdefined thread</b><br>
+                import threading<br>
+                def show():<br>
+                &emsp;&emsp;     print('userdefined thread')<br>
+                t = threading.Thread(target=show)<br>
+                t.start()<br>
+                If a program contains multiple threads then we cannot guarantee the order of thread execution. The execution of the threads in an application will be decided by  Thread Scheduler.<br>
+                <br><br>
+               <b> Program: to execute multiple threads</b><br>
+                import threading<br>
+                def show():<br>
+                &emsp;&emsp;     for i in range(1,11):<br>
+                &emsp;&emsp;   &emsp;&emsp;         print(threading.current_thread().getName(),':',i)<br>
+                t1 = threading.Thread(target=show)<br>
+                t1.start()<br>
+                t2 = threading.Thread(target=show)<br>
+                t2.start()<br>
+                for i in range(1,11):<br>
+                &emsp;&emsp;     print('main thread :',i)<br><br><br>
+                
+               <b> start():</b> This method is used to execute a user defined thread.<br>
+              1)  When we call start(), the start() will internally call run() method, but before calling run() method, it will perform some low level activities.<br>
+              2)  Low Level Activities are registering the user defined thread with Thread Scheduler, once the registration is done the thread scheduler, the thread scheduler will allocate some resources (like memory, processor etc) to the registered user defined thread and then the registered user defined thread will now call run() method.<br>
+              3)  We can execute the logic available in run() method by calling run() method directly in such case, the logic of run() method will be executed by the main thread and the run() method will be considered as a normal method.<br>
+              4)  We cannot call start() method two times or multiple times on the same thread because, we cannot register the same thread multiple times. <br><br><br>
+                
+              <b> sleep(long milliseconds):</b> This method is used to suspend the execution of a thread for a specified amount of time.<br>
+              <b>  getName():</b> This method can be used for retrieving the name of the thread.<br>
+              <b> setName(String name):</b> This method can be used to assign a name to a thread. The default names of the user defined threads will be Thread-1, Thread-2, Thread-3, ....<br>
+              <b> Note:</b> We can change the name of any thread including the main thread.<br><br><br>
+              <b> Program: to change the thread name</b><br>
+                from threading import *<br>
+                print('current thread :', current_thread().getName())<br>
+                current_thread().setName('xyz')<br>
+                print('current thread :', current_thread().getName())<br><br><br>
+                
+              <b>  Program: to change the thread name</b>
+                from threading import *<br>
+                print('current thread :', current_thread().getName())<br>
+                current_thread().name = 'abc'<br>
+                print('current thread :', current_thread().name)<br>
+                
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

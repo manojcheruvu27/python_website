@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen adn (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>I/O_Operations</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Input/Output Operations</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li class="current"><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li><a href="./Functions.html">8.Functions</a></li>
+                <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li><a href="./lambdas.html">12.lambdas</a></li>
+                <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li><a href="./sql.html">17.Database_Management</a></li>
+            </ul>
+            
+            
+        
+        
+            <p>  
+                <span>Taking input in python:</span><br><br>
+                1)To take input in python we use input() function.<br>
+                ex: name = input('Enter your age')<br><br>
+                2)By default the input value accepted will be a string.<br><br>
+                <img src="./img/input().JPG"><br><br>
+                3)To take the values of other datatypes, we explicitly type cast the input value into required datatype.<br><br>
+                <b>Type casting:</b><br><br>
+                1)Type casting is the process of converting the value from one datatype to another.<br><br>
+                2)For type casting syntax is. <br>
+                name_of_datatype_you_want_to_convert_value_into()<br><br>
+                3)To typecast into int, we use int() function.<br><br>
+                4)To typecast into float we use float() function.<br><br>
+                5)To typecast into string we use string() function.<br><br>
+                <b>Example for type casting.</b><br><br>
+                <img src="./img/typecasting.JPG" ><br><br>
+                6)Coming back to input() function, by default we have the value as String.<br><br>
+                7)To take integer value as input we typecast it to int as follows:<br>
+                value = int(input('Enter an integer')).<br><br>
+                8)To take float value as input we typecast it to float as follows:<br>
+                value = float(input('Enter a floating point value'))<br><br>
+                <b>Examples for typecasted input values:</b><br><br>
+                <img src="./img/typeint.JPG"><br><br>
+                <img src="./img/typefloat.JPG"><br><br><br>
+                <span>Alternative for typecasting:</span><br>
+                1)There is a function called eval().<br>
+                2)eval() automatically detects the data type and converts value into required datatype.<br><br>
+                <img src="./img/eval().JPG"><br><br>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <br><br><br><br>
+                <b>print() in python:</b><br><br>
+                1)Used to print the given message or a value.<br><br>
+                <img src="./img/print.JPG"><br><br>
+                2)print() is a built-in-function meaning pre-defined function that comes with python.<br><br>
+                <img src="./img/type(print).JPG"><br><br>
+                3)Creating vertical spaces using print().<br><br>
+                <img src="./img/verticalspace.JPG"><br><br>
+                4)We can use either "" or '' in print() statement.Just incase we want to print "", then we can use '', in our print() statement and vice-versa.<br><br>
+                <img src="./img/Double in single.JPG"><br>
+                Notice the output has ""<br><br>
+                5)sep paramenter is used to add a character in regular values in print() function.<br><br>
+                <img src="./img/sep.JPG"><br><br>
+                6)% is used as place holder meaning to add a value of other datatype with our message.<br><br>
+                %d is used as a placeholder for numeric or decimal values.<br>
+                %s is used as a placeholder for strings.<br><br>
+                <img src="./img/typeinprint.JPG"><br><br>
+                7)By Using format parameter.The repeated content in message need not to be typed again and again..!<br><br>
+                This is how you can do it<br><br>{} acts as placeholder.<br><br>
+                <img src="./img/formatinprint.JPG"><br><br>
+                8)To display multiple values.<br><br>
+                <img src="./img/multiplevarinprint.JPG"><br><br>
+                9)To add a message at the end we set the end parameter.<br><br>
+                <img src="./img/endinprint.JPG">
+                
+                
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

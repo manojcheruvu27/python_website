@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Exception_Handling</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Exception Handling</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li><a href="./Functions.html">8.Functions</a></li>
+                <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li><a href="./lambdas.html">12.lambdas</a></li>
+                <li class="current"><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li><a href="./sql.html">17.Database_Management</a></li>
+                
+            </ul>
+            
+            
+        
+        
+            <p>  <span> Exception Handling</span> <br>
+                When a program is developed in python language the program may contain some errors. The errors that occur in the program are classified into two types.<br>
+                1)Syntax Error<br>
+                2)Exception<br>
+               <b> Syntax Error: </b>The errors which occur in the program because of the syntactical mistakes are called as syntax errors.<br>
+               <b> Exception:</b><br> i)The errors which occur in the program because of the logical failure or invalid input or wrong data etc are called as exceptions. The exceptions will occur at runtime.<br>
+                ii)When an Exception occurs in a program, the program will be terminated abnormally, and incompletely executed.<br>iii) As a programmer, we want the program to execute completely and terminate normally.<br>iv) In order to execute the program completely and terminate normally we take help of exception handling. <br>
+               <b> Exception Handling </b>is a process of finding an alternate solution, so that the program executes completely and terminates normally.<br>
+              <b>  Note:</b> The process of exception handling will not remove the exception from the program.<br>
+                The keywords related to Exception Handling concept are:<br>
+                try<br>
+                except<br>
+                else<br>
+                finally<br>
+                raise<br><br><br>
+                
+               <b> Program: to generate an exception</b><br>
+                print('line one')<br>
+                print(10/0)<br>
+                print('line three')<br>
+                print('line four')<br><br>
+                
+                In the above program, we are dividing a number by 0. When we divide a number by 0 we get a runtime error called ZeroDivisionError, because of this error the execution of the program will be stopped abnormally which will lead to incomplete execution.<br>
+                
+                Every exception in python is a class. Every exception in python will be a subclass of Exception class which is subclass of BaseException.<br>
+                <b>Family of exceptions:</b><br><br>
+                <img src="./img/Exceptions.JPG"><br><br>
+               <b> try: </b>A try is a suite which can contain a group of statements which may generate the exception.<br>
+<b>Syntax: </b><br>
+try:<br>
+&emsp;&emsp;    statement1<br>
+&emsp;&emsp;    statement2<br>
+&emsp;&emsp;    …………..<br>
+try suite is indentated with 4 spaces.<br>
+The try suite can contain any number of statements but we are recommended to specify only those statements which may generate the exception.<br>
+<b>except:</b> An except is a suite which can contain a group of statements which are used for displaying the information of the exception that has occurred.<br>
+Syntax1:<br>
+except ExceptionName:<br>
+&emsp;&emsp;    statement1<br>
+&emsp;&emsp;    statement2<br>
+&emsp;&emsp;    …………..<br><br>
+Syntax2:<br>
+except Exception1, Exception2, Exception3, … :<br>
+&emsp;&emsp;    statement1<br>
+&emsp;&emsp;    statement2<br>
+&emsp;&emsp;    …………..<br><br>
+Syntax3:<br>
+except ExceptionName as variable:<br>
+&emsp;&emsp;    statement1<br>
+&emsp;&emsp;    statement2<br>
+    …………..<br><br>
+Syntax4:<br>
+except (Exception1, Exception2, Exception3, …) as variable:<br>
+&emsp;&emsp;    statement1<br>
+&emsp;&emsp;    statement2<br>
+&emsp;&emsp;    …………..<br><br>
+Syntax5:<br>
+except:<br>
+&emsp;&emsp;    statement1<br>
+&emsp;&emsp;    statement2<br>
+&emsp;&emsp;    …………..<br><br><br>
+<b>else:</b> An else is a suite which can contain a group of statements which will execute when there is no exception in the try suite.<br>
+Syntax:<br>
+else:<br>
+&emsp;&emsp;    statement1<br>
+&emsp;&emsp;    statement2<br>
+&emsp;&emsp;    …………..<br><br><br>
+
+
+
+<b>finally:</b> The finally is a suite which can contain a group of statements which can perform code cleanup activities like releasing the files, memory, connections etc.<br>
+Syntax:<br>
+finally:<br>
+&emsp;&emsp;     statement1<br>
+&emsp;&emsp;     statement2<br>
+&emsp;&emsp;     …………..<br><br><br>
+
+<b>Program: to implement exception handling</b><br>
+print("line one")<br>
+try:<br>
+&emsp;&emsp;    a = int(input("enter first value : "))<br>
+&emsp;&emsp;    b = int(input("enter second value : "))<br>
+&emsp;&emsp;   print(a/b)<br>
+except ZeroDivisionError:<br>
+&emsp;&emsp;    print("ZeroDivisionError has occurred")<br>
+except ValueError:<br>
+&emsp;&emsp;    print("ValueError has occurred")<br>
+except:<br>
+&emsp;&emsp;    print("some exception has occurred")<br>
+else:<br>
+&emsp;&emsp;    print ("else suite")<br>
+finally:<br>
+&emsp;&emsp;    print ("finally suite")<br>
+print("line three")<br>
+print("line four")<br>
+
+
+                
+                
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

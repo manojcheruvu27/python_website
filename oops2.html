@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Methods</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Methods</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li><a href="./Functions.html">8.Functions</a></li>
+                <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li class="current"><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li><a href="./lambdas.html">12.lambdas</a></li>
+                <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li><a href="./sql.html">17.Database_Management</a></li>
+                
+            </ul>
+            
+            
+        
+        
+            <p>   <span>Instance Variables and Instance Methods</span><br><br>
+                Instance Variable: If every object contains their own copy of a variable, then the variable is called as an instance variable.<br>
+                Instance Method: If a method is acting upon an object(instance) then the method is called as an  instance method.<br>
+                An instance method can contain any number of parameters, but the first parameter must be specified as self which represents the current(object) instance of a class.<br>
+                <b>Syntax of an Instance Method: </b><br>
+                def method_name(self, parameters):<br>
+                &emsp;&emsp;    statement1<br>
+                &emsp;&emsp;    statement2<br>
+                &emsp;&emsp;    ...<br><br><br>
+                An Instance Variable can be declared in 3 locations and they are:<br>
+                1)	Inside the constructor by using self(object).<br>
+                2)	Inside an instance method by using self(object).<br>
+                3)	Outside the class by using reference(object).<br>
+                Note: We are recommended to declare an instance variable inside the constructor.<br><br><br>
+                
+                <b>Syntax of an instance variable inside a constructor: </b><br>
+                def __init__(self):<br>
+                &emsp;&emsp;    self.variable1 = value1<br>
+                &emsp;&emsp;    self.variable2 = value2<br>
+                &emsp;&emsp;     ...<br><br><br>
+                An instance variable declared inside the constructor will be stored into the object during the object creation time.<br><br>
+               <img src="./img/meth1.JPG"><br><br>
+                <b>Syntax of an instance variable inside an instance method: </b><br>
+                def methodname(self, parameters):<br>
+                &emsp;&emsp;    self.variable1 = value1<br>
+                &emsp;&emsp;    self.variable2 = value2<br>
+                &emsp;&emsp;    ...<br><br><br>
+                An instance variable declared inside an instance method will be stored into the object when the instance method is called.<br><br>
+                <img src="./img/meth2.JPG"><br><br><br>
+                <b>Syntax of an instance variable outside the class: </b><br>
+                reference.variable1 = value1<br>
+                reference.variable2 = value2<br>
+                …<br><br><br>
+                An instance variable declared outside the class will be stored into the object when the statement is executed.<br>
+                <b>Accessing the instance variable outside the class: </b> <br>
+                An instance variable can be accessed outside the class by using the reference variable.<br>
+                <b>Syntax: </b><br>
+                reference.instancevariable<br><br><br>
+                <img src="./img/oops8.JPG"><br><br><br>
+                
+                <b>Accessing the instance variable inside an instance method: </b><br>
+                 An instance variable can be accessed inside the instance method by using self.<br>
+                <b>Syntax: </b><br>
+                def methodname(self, parameters):<br>
+                &emsp;&emsp;    self.instancevariable<br><br>
+                <img src="./img/oops11.JPG"><br><br>
+                <img src="./img/oops12.JPG"><br><br>
+                <img src="./img/oops13.JPG"><br><br>
+                <img src="./img/oops14.JPG"><br><br>
+
+                <br><br>
+                
+                
+                <span>Methods</span><br>
+                A method can be used for performing some task. The name of a method can be any valid python identifier. A method will execute only when we call it. A method will execute one time, for every call.<br>
+                
+                
+                Inside Python class 3 types of methods are allowed<br>
+                	1. Instance Methods<br>
+                	2. Class Methods<br>
+                	3. Static Methods<br><br><br>
+                <b>Instance Methods: </b><br>
+                Inside method implementation if we are using instance variables then such type of methods are called instance methods.<br>
+                Inside instance method declaration, we have to pass self variable.<br>
+                def m1(self)<br>
+                By using self variable inside method we can able to access instance variables.<br>
+                Within the class we can call instance method by using self variable and from outside of the class we can call by using object reference.<br><br><br>
+                <span>Setter and Getter Methods:</span><br>
+                We can set and get the values of instance variables by using getter and setter methods.<br><br>
+                <b>Setter Method: </b><br>
+                setter methods can be used to set values to the instance variables. setter methods also known as mutator methods.<br>
+                <b>syntax: </b><br>
+                def setVariable(self,variable):<br>
+                &emsp;&emsp;    self.variable=variable<br><br><br>
+                <b>Getter Method: </b><br>
+                Getter methods can be used to getvalues of the instance variables. <br>
+                Getter methods also known as accessor methods.<br>
+                <b>syntax: </b><br>
+                def getVariable(self):<br>
+                &emsp;&emsp;    return self.variable<br><br>
+                <img src="./img/meth3.JPG"><br><br><br>
+                
+                <b>Class Methods: </b><br>
+                Inside method implementation if we are using only class variables (static variables), then such type of methods we should declare as class method.<br>
+                We can declare class method explicitly by using @classmethod decorator. <br>
+                For class method we should provide cls variable at the time of declaration<br>
+                We can call class method by using class name or object reference variable<br>
+                <img src="./img/meth4.JPG"><br><br><br>
+                
+                
+                
+                <b>Static Methods: </b><br>
+                In general these methods are general utility methods. Inside these methods we won't use any instance or class variables. Here we won't provide self or cls arguments at the time of declaration.<br>
+                We can declare static method explicitly by using @staticmethod decorator. We can access static methods by using class name or object reference<br>
+                <img src="./img/meth5.JPG"><br><br><br>
+                
+                <b>Class Variable: </b><br>
+                If a variable is common to all the objects in a class, then the variable is called as a class variable.<br>
+                If we do not want to allocate memory for a variable multiple times, then we take the help of class variable. The memory for the class variable will be allocated only time for the entire class i.e it is common to all the objects.<br>
+                A Class Variable can be declared in 6 locations and they are:<br>
+                1)	Inside the class outside the methods and constructors.<br>
+                2)	Inside a constructor by using classname <br>
+                3)	Inside an instance method by using classname.<br>
+                4)	Inside a class method either by using classname or cls.<br>
+                5)	Inside a static method by using classname.<br>
+                6)	Outside the class by using classname.<br>
+                
+                <b>Syntax of a class variable inside the class outside the methods and constructors: </b><br>
+                class ClassName:<br>
+                &emsp;&emsp;    variable1 = value1<br>
+                &emsp;&emsp;    variable2 = value2<br><br>
+                
+                <b>Syntax of a class variable inside a constructor: </b><br>
+                def __init__(self, parameters):<br>
+                &emsp;&emsp;    ClassName.variable1 = value1<br>
+                &emsp;&emsp;    ClassName.variable2 = value2<br><br>
+                
+                <b>Syntax of a class variable inside an instance method: </b><br>
+                def methodname(self, parameters):<br>
+                &emsp;&emsp;    ClassName.variable1 = value1<br>
+                &emsp;&emsp;    ClassName.variable2 = value2<br><br>
+                
+                <b>Syntax of a class variable inside a class method: </b><br>
+                @classmethod<br>
+                def methodname(cls, parameters):<br>
+                &emsp;&emsp;    cls.variable1 = value1<br>
+                &emsp;&emsp;    ClassName.variable2 = value2<br><br>
+                  
+                <b>Syntax of a class variable inside a static method: </b><br>
+                @staticmethod<br>
+                def methodname():<br>
+                &emsp;&emsp;    ClassName.variable1 = value1<br>
+                &emsp;&emsp;    ClassName.variable2 = value2<br><br>
+                
+                <b>Syntax of a class variable outside the class: </b><br>
+                ClassName.variable1 = value1<br>
+                ClassName.variable2 = value<br><br>
+                
+                <b>Python Constructor</b><br>
+                A constructor is a special type of method (function) which is used to initialize the instance members of the class.<br>
+                Constructors can be of two types.     <br>                                                                 1. Parameterized Constructor	<br>							 2.Non-parameterized Constructor<br>
+               <img src="./img/meth7.JPG"><br><br>
+                <img src="./img/meth6.JPG"><br><br>
+                Constructor with default and keyword arguments:<br><br>
+                <img src="./img/cons1.JPG"><br><br>
+                Combination of method and a constructor:<br><br>
+                <img src="./img/cons2.JPG"><br><br>
+                
+                A class can contain instance variable, instance method, class variable, class method and static method.<br>
+                
+                <b>Instance Variable: </b><br>
+                An instance variable can be accessed only by using the object(either reference or self).<br>
+                •	An instance variable can be accessed outside the class by using reference(object).<br>
+                •	An instance variable can be accessed inside the constructor and inside the instance method by using self(object).<br>
+                •	An instance variable cannot be accessed inside the class method and inside the static method.<br><br>
+                
+                <b>Instance Method: </b> An instance method can be accessed only by using the object(either reference or self).<br>
+                •	An instance method can be accessed outside the class by using reference(object).<br>
+                •	An instance method can be accessed inside the constructor and inside the instance method by using self(object).<br>
+                •	An instance method cannot be accessed inside the class method and inside the static method.<br>
+                <b>Class Variable: </b>A class variable can be accessed either by using the classname(cls) or by using an object(either reference or self).<br>
+                •	A class variable can be accessed outside the class by using either the classname or by using an object(reference).<br>
+                •	A class variable can be accessed inside the constructor and inside the instance method either by using the classname or by using an object(self).<br>
+                •	A class variable can be accessed inside the class method either by using the classname or by using cls.<br>
+                •	A class variable can be accessed inside the static method by using the classname.<br>
+                <b>Class Method: </b> A class method can be accessed either by using the classname(cls) or by using an object(either reference or self).<br>
+                •	A class method can be accessed outside the class either by using the classname or by using an object(reference).<br>
+                •	A class method can be accessed inside the constructor and inside the instance method by using either the classname or by using an object(self).<br>
+                •	A class method can be accessed inside the class method either by using the classname or by using cls.<br>
+                •	A class method can be accessed inside the static method by using the classname.<br><br>
+                
+                <b>Static Method: </b> A static method can be accessed either by using the classname(cls) or by using an object(either reference or self).<br>
+                •	A static method can be accessed outside the class either by using the classname or by using an object(reference).<br>
+                •	A static method can be accessed inside the constructor and inside the instance method either by using the classname or by using an object(self).<br>
+                •	A static method can be accessed inside the class method either by using the classname or by using cls.<br>
+                •	A static method can be accessed inside the static method by using the classname.<br><br>
+                <img src="./img/oops9.JPG"><br><br>
+                <img src="./img/oops10.JPG"><br><br>
+                <b>Local Variable: </b> If a variable is declared inside a constructor or inside a method or inside a function, then the variable is called as local variable.<br>
+                <b>Global Variable: </b> If a variable is declared outside a class and outside a function, then the variable is called as global variable.<br>
+                The global variables can be accessed any where but the local variables can be accesed only in that method or function where they are declared.<br>
+                The global variables can be accessed inside a function, but they cannot be modified because they will be considered as a local variable. In order to modify the global variable inside the function, then we must use global keyword for that variable in that function.<br><br>
+                
+                <img src="./img/meth8.JPG"><br><br>
+                <img src="./img/meth9.JPG"><br><br><br><br>
+                
+                
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

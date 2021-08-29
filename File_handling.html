@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>File_handling</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>File Handling</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+
+
+              <li><a href="./index.html">1.Introduction</a></li>
+              <li><a href="./variables.html">2. Variables </a></li>
+              <li><a href="./data_types.html">3.Data types</a></li>
+              <li><a href="./operators.html">4.Operators</a>  </li>
+              <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+              <li><a href="./in,print.html">6.I/O_Operations</a></li>
+              <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+              <li><a href="./Functions.html">8.Functions</a></li>
+              <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+              <li><a href="./sequences.html">9.Sequences</a></li>
+              <li><a href="./modules.html">10.Modules</a></li>
+              <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+              <li><a href="./oops2.html">11.1.Methods</a></li>
+              <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+              <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+              <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+              <li><a href="./lambdas.html">12.lambdas</a></li>
+              <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+              <li class="current"><a href="./File_handling.html">14.File_Handling</a></li>
+              <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+              <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+              <li><a href="./sql.html">17.Database_Management</a></li>
+            </ul>
+            
+            
+        
+        
+            <p>  <span> File Handling: </span> <br>
+                A file is a location on the hard disk which can be used for storing data. A file should be used for storing the data when we have a small amount of data.<br>
+                The files are classified into two types<br>
+                1)Text Files<br>
+                2)Binary Files<br>
+                In a file we can perform either reading or writing operations. To perform the reading or writing operations on the file, the file must be opened. To open a file we take the help of open().<br>
+              <b>  Syntax: </b>  open(filename, mode)<br>
+                The various modes are:<br>
+                r: This mode can be used for reading the data from the specified file. If the specified file is not available then we get FileNotFoundError. r is the default mode.<br>
+                w: This mode can be used for writing the content into the specified file. If the specified file does not exist then it will create a new file and then write the content into that file but if the specified file already exists then it will overwrite the content.<br>
+                a: This mode can be used for writing the content into the specified file. If the specified file does not exist then it will create a new file and then write the content into that file but if the specified file already exists then it will append the content.<br>
+                x: This mode can be used for writing the content into the specified file. If the specified file does not exist then it will create a new file and then write the content into that file but if the specified file already exists then we get FileExistsError.<br>
+                r+: This mode can be used for reading and writing the data into the specified file.<br>
+                w+: This mode can be used for writing and reading the data from the specified file.<br>
+                a+: This mode can be used for reading and appending the data into the specified file.<br>
+                
+                The above modes are applicable to text files. If we want to apply the modes to the binary files, then we need to suffix b to all the above modes(rb, wb, ab, xb, r+b, w+b, a+b).<br>
+                
+                Once we perform the reading and writing operations on the file, we need to close the file.To close the file we take the help of close().<br><br><br>
+                
+               <b> Writing Operations:</b> To write the data into a file, we have the following 2 methods.<br>
+                write(): This method can be used to a write a string into a file.<br>
+                writelines(): This method can be used to multiple lines of string into a file.<br><br><br>
+                
+               <b> Program: to write the content into a file with 'w' mode</b><br>
+                f = open('xyz.txt','w')<br>
+                f.write('hello friends')<br>
+                f.write('good morning')<br>
+                f.write('this is file handling concept in python')<br>
+                f.write('thank you')<br>
+                f.close()<br>
+                print('data is stored into the file')<br><br><br>
+                To perform reading and writing operations, we need to open the file. Once we perform reading and writing operations, we have to close the file explicitly by using close(). <br> If we want to close the file automatically after the operations are performed then we need to take the help of with keyword.<br>
+               <b> Program: to write the content into a file with 'w' mode</b><br>
+                with open('xyz.txt','w') as f:<br>
+                &emsp;&emsp;    f.write('hello friends')<br>
+                &emsp;&emsp;   f.write('good morning')<br>
+                &emsp;&emsp;    f.write('this is file handling concept in python')<br>
+                &emsp;&emsp;    f.write('thank you')<br>
+                print('data is stored into the file')<br>
+                Once the control comes out of the with suite, the file will be closed automatically.<br><br><br>
+              <b>  Program: to write the content into a file with 'a' mode</b><br>
+                f = open('xyztxt','a')<br>
+                f.write('hello friends')<br>
+                f.write('good morning')<br>
+                f.write('this is file handling concept in python')<br>
+                f.write('thank you')<br>
+                f.close()<br>
+                print('data is stored into the file')<br><br><br>
+             <b>   Program: to write the content into a file with 'x' mode</b><br>
+                f = open('xyz.txt','x')<br>
+                f.write('hello friends')<br>
+                f.write('good morning')<br>
+                f.write('this is file handling concept in python')<br>
+                f.write('thank you')<br>
+                f.close()<br><br><br>
+               <b> Program: to write the content into a file with 'w' mode</b><br>
+                f = open('abcd.txt','w')<br>
+                data = ['java\n','python\n','testing\n','oracle\n']<br>
+                f.writelines(data)<br>
+                f.close()<br>
+                print('data stored into the file')<br><br><br>
+                
+                <b>Reading Operations:</b> To read the data from a file, we have the following 4 methods.<br><br>
+                read(): This method will read the total data from the file.<br>
+                readline(): This method will read only one line from the file.<br>
+                readlines():  This method will read all the lines from the file into a list.<br>
+                read(n): This method will read n characters from the file.<br><br><br>
+                
+               <b> Program:</b> to read the entire file<br>
+                f = open("abcd.txt")<br>
+                text = f.read()<br>
+                print(text)<br>
+                f.close()<br><br><br>
+                
+               <b> Program: to read the entire file</b><br>
+                with open('abcd.txt','r') as f:<br>
+                &emsp;&emsp;     text = f.read()<br>
+                &emsp;&emsp;     print(text)<br><br><br>
+                
+              <b> Program: to read one line from a file</b> <br>
+                f = open("abcd.txt")<br>
+                text = f.readline()<br>
+                print(text)<br>
+                f.close()<br><br><br>
+                
+               <b> Program: to read multiple lines from a file</b><br>
+                f = open("abcd.txt")<br>
+                print(f.readline())<br>
+                print(f.readline())<br>
+                print(f.readline())<br>
+                print(f.readline())<br><br><br>
+                
+              <b>  Program: to read multiple lines from a file</b><br>
+                f = open("abcd.txt")<br>
+                print(f.readline(), end='')<br>
+                print(f.readline(), end='')<br>
+                print(f.readline(), end='')<br>
+                print(f.readline(), end='')<br>
+                f.close()<br><br><br>
+                
+             <b>  Program: to read all lines from a file</b><br> 
+                f = open("abcd.txt")<br>
+                list = f.readlines()<br>
+                print(list)<br>
+                f.close()<br><br><br>
+                
+              <b> Program: to read all lines from a file</b> <br>
+                f = open("abcd.txt")<br>
+                list = f.readlines()<br>
+                for x in list:<br>
+                &emsp;&emsp;     print(x,end='')<br>
+                f.close()<br><br><br>
+                
+              <b>  Program: to read 10 characters from a file</b><br>
+                f = open("abcd.txt")<br>
+                text = f.read(10)<br>
+                print(text)<br>
+                f.close()<br><br><br>
+                
+              <b>  Program: to read from a file with try suite</b><br>
+                try:<br>
+                &emsp;&emsp;     f = open("abcd.txt")<br>
+                &emsp;&emsp;     text = f.read(10)<br>
+                &emsp;&emsp;     print(text)<br>
+                finally:<br>
+                &emsp;&emsp;     f.close()<br><br><br>
+                
+                When we are writing data into a file and if we do not close the file, then the content will not be placed into the file. If we want to place the content into the file without closing, then we need to take the help of flush().<br>
+               flush():   This method will clear the buffer and place the content into the file.<br>
+              <b> Program: to clean the buffer</b> <br>
+                f = open('xyz.txt','w')<br>
+                f.write('hello friends')<br>
+                f.write('good morning')<br>
+                f.write('this is file handling concept in python')<br>
+                f.write('thank you')<br>
+                f.flush()<br>
+                print('data is stored into the file')<br><br><br>
+                
+                tell(): This method will specify the current location of the cursor.<br>
+                seek(): This method will place the cursor in the specified location.<br>
+               <b> Syntax:</b><br>
+                f.seek(offset)<br>
+                
+              <b>  Program:  to move the file position</b><br>
+                data = 'hello friends good morning see you'<br>
+                f = open('xyz.txt','w')<br>
+                f.write(data)<br>
+                with open('xyz.txt','r+') as f:<br>
+                &emsp;&emsp;     text = f.read()<br>
+                &emsp;&emsp;     print(text)<br>
+                &emsp;&emsp;     print('the current position :',f.tell())<br>
+                &emsp;&emsp;     f.seek(19)<br>
+                &emsp;&emsp;     print('the current position :',f.tell())<br>
+                &emsp;&emsp;     f.write('evening')<br>
+                &emsp;&emsp;     f.seek(0)<br>
+                &emsp;&emsp;     text = f.read()<br>
+                &emsp;&emsp;     print(text)<br><br><br>
+                
+                
+                
+                name: This attribute will return the file name.<br>
+                mode: This attribute will return the mode in which the file is opened.<br>
+                closed: This attribute will specify whether a file is closed or not.<br>
+                readable(): This method will specify whether a file is readable or not.<br>
+                writable(): This method will specify whether a file is writable or not.<br>
+                truncate(): This method can be used to resize the file size.<br>
+                
+             <b>  Program: to check the file attributes</b> <br>
+                f = open('abcd.txt','w')<br>
+                print(f.name)<br>
+                print(f.mode)<br>
+                print(f.closed)<br>
+                print(f.readable())<br>
+                print(f.writable())<br>
+                f.close()<br>
+                print(f.closed)<br><br><br>
+                
+              <b>  Program: to read and write binary data</b><br>
+                f1 = open('abc.jpg','rb')<br>
+                f2 = open('xyz.jpg','wb')<br>
+                data = f1.read()<br>
+                f2.write(data)<br>
+                f1.close()<br>
+                f2.close()<br><br><br>
+                
+                isfile(): This method can be used to check whether a specified file is available or not.<br>
+                isfile() is available in os.path module<br>
+                Program197: to read the file based on file availability <br>
+                from os.path import isfile<br>
+                filename = input('Enter the file name : ')<br>
+                if isfile(filename):<br>
+                &emsp;&emsp;     f = open(filename)<br>
+                &emsp;&emsp;     text = f.read()<br>
+                &emsp;&emsp;     print(text)<br><br><br>
+                
+                
+                
+              <b> Program: to read the file based on file availability</b> <br>
+                import os<br>
+                filename = input('Enter the file name : ')<br>
+                if os.path.isfile(filename):<br>
+                &emsp;&emsp;     f = open(filename)<br>
+                &emsp;&emsp;     text = f.read()<br>
+                &emsp;&emsp;     print(text)<br>
+                else:<br>
+                &emsp;&emsp;     print('file does not exist')<br><br><br>
+                    
+               <b> Program: to count characters, words, lines in a file</b><br>
+                import os<br>
+                filename = input('Enter the file name : ')<br>
+                if os.path.isfile(filename):<br>
+                &emsp;&emsp;     f = open(filename)<br>
+                else:<br>
+                &emsp;&emsp;     print('file does not exist')<br>
+                lc=wc=cc=0<br>
+                for line in f:<br>
+                &emsp;&emsp;     lc = lc + 1<br>
+                &emsp;&emsp;     cc = cc + len(line)<br>
+                &emsp;&emsp;    words = line.split()<br>
+                &emsp;&emsp;     wc = wc + len(words)<br>
+                print(lc)<br>
+                print(wc)<br>
+                print(cc)<br><br><br><br>
+                    
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+               <span> csv module</span><br><br>
+               <b>Program: to write data into csv files</b><br>
+                import csv<br>
+                with open('emp.csv','w',newline='') as f:<br>
+                &emsp;&emsp;     w = csv.writer(f)<br>
+                &emsp;&emsp;     w.writerow(['Eno','Ename','Esal','Eaddr'])<br>
+                &emsp;&emsp;    n = int(input('Enter the number of values : '))<br>
+                &emsp;&emsp;     for i in range(1,n+1):<br>
+                &emsp;&emsp; &emsp;&emsp;         a = int(input('Enter '+str(i)+' employee number : '))<br>
+                &emsp;&emsp; &emsp;&emsp;        b = input('Enter '+str(i)+' employee name : ')<br>
+                &emsp;&emsp; &emsp;&emsp;         c = float(input('Enter '+str(i)+' employee salary : '))<br>
+                &emsp;&emsp; &emsp;&emsp;        d = input('Enter '+str(i)+' employee address : ')<br>
+                &emsp;&emsp; &emsp;&emsp;        w.writerow([a,b,c,d])<br><br><br>
+                
+                emp.csv<br>
+                Eno,Ename,Esal,Eaddr<br>
+                101,abcd,5678.9,Hyderabad<br>
+                102,pqrs,12345.6,Bangalore<br>
+                103,rtyu,15000.3,Delhi<br>
+                104,qwer,9023.1,Mumbai<br>
+                105,mnop,34501.5,Pune<br>
+                106,zxcv,60000.8,Chennai<br><br><br>
+                
+              <b>  Program:  to read data from csv files</b><br>
+                import csv<br>
+                f = open('emp.csv','r')<br>
+                r = csv.reader(f)<br>
+                data = list(r)<br>
+                print(data)<br>
+                for line in data:<br>
+                &emsp;&emsp;     for word in line:<br>
+                &emsp;&emsp; &emsp;&emsp;         print(word,'  ',end='')<br>
+                &emsp;&emsp;    print()<br><br><br><br>
+                
+                
+                
+               <span> zipfile module</span><br>
+                ZIP is an archive file format that supports lossless data compression. A ZIP file is a single file containing one or more compressed files, providing a best solution to make large files smaller and keep related files together.<br>
+                
+              <b> Program: to compress a list of files</b> <br>
+                from zipfile import *<br>
+                f = ZipFile('files.zip','w',ZIP_DEFLATED)<br>
+                f.write('abcd.txt')<br>
+                f.write('xyz.txt')<br>
+                f.write('file.txt')<br>
+                f.close();<br><br><br>
+                
+              <b> Program: to uncompress a file</b> <br>
+                from zipfile import *<br>
+                f = ZipFile('files.zip','r',ZIP_STORED)<br>
+                names = f.namelist()<br>
+                for filename in names:<br>
+                &emsp;&emsp;    print(filename)<br>
+                &emsp;&emsp;    f1 = open(filename,'r')<br>
+                &emsp;&emsp;    print(f1.read())<br>
+                &emsp;&emsp;    print()<br><br><br>
+                
+             <b>   Program: to display the details of the files available in zip file</b> <br>
+                from zipfile import ZipFile <br>
+                import datetime <br>
+                with ZipFile('files.zip', 'r') as zp: <br>
+                &emsp;&emsp;    for info in zp.infolist(): <br>
+                &emsp;&emsp;&emsp;&emsp;            print(info.filename) <br>
+                &emsp;&emsp;&emsp;&emsp;            print('Modified : ' + str(datetime.datetime(*info.date_time))) <br>
+                &emsp;&emsp;&emsp;&emsp;            print('System : ' + str(info.create_system) + '(0 = Windows, 3 = Unix)') <br>
+                &emsp;&emsp;&emsp;&emsp;            print('ZIP version : ' + str(info.create_version))<br> 
+                &emsp;&emsp;&emsp;&emsp;            print('Compressed : ' + str(info.compress_size) + ' bytes') <br>
+                &emsp;&emsp;&emsp;&emsp;            print('Uncompressed : ' + str(info.file_size) + ' bytes\n')<br><br><br>
+                
+               <span>Pickling and Unpickling</span> <br>
+                Pickling: It is a process converting an object into a stream of bytes.<br>
+                Unpickling: It is a process converting a stream of bytes into object.<br>
+                dump(): This function is used to serialize an object.<br>
+                load(): This function is used to de-serialize an object.<br>
+                
+                The dump() and load() are available in pickle module.<br><br>
+                
+              <b> Program: to perform pickling and unpickling</b> <br>
+                import pickle<br>
+                class Customer:<br>
+                &emsp;&emsp;    def __init__(self, cid, cname, caddr):<br>
+                &emsp;&emsp;&emsp;&emsp;        self.cid = cid<br>
+                &emsp;&emsp;&emsp;&emsp;        self.cname = cname<br>
+                &emsp;&emsp;&emsp;&emsp;        self.caddr = caddr<br><br>
+                        
+                &emsp;&emsp;    def display(self):<br>
+                &emsp;&emsp;&emsp;&emsp;        print("cid :",self.cid)<br>
+                &emsp;&emsp;&emsp;&emsp;        print("cname :",self.cname)<br>
+                &emsp;&emsp;&emsp;&emsp;        print("caddr :",self.caddr)<br><br>
+                
+                with open("data.txt",'wb') as f:<br>
+                &emsp;&emsp;    c = Customer(123,'Manoj','hyderabad')<br>
+                &emsp;&emsp;    pickle.dump(c,f)<br><br>
+                    
+                with open("data.txt",'rb') as f:<br>
+                &emsp;&emsp;&emsp;&emsp;    obj = pickle.load(f)<br>
+                &emsp;&emsp;&emsp;&emsp;    obj.display()<br>
+                
+                
+                
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

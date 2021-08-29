@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Sequences</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Sequences</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+
+
+
+
+              <li><a href="./index.html">1.Introduction</a></li>
+              <li><a href="./variables.html">2. Variables </a></li>
+              <li><a href="./data_types.html">3.Data types</a></li>
+              <li><a href="./operators.html">4.Operators</a>  </li>
+              <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+              <li><a href="./in,print.html">6.I/O_Operations</a></li>
+              <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+              <li><a href="./Functions.html">8.Functions</a></li>
+              <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+              <li class="current"><a href="./sequences.html">9.Sequences</a></li>
+              <li><a href="./modules.html">10.Modules</a></li>
+              <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+              <li><a href="./oops2.html">11.1.Methods</a></li>
+              <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+              <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+              <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+              <li><a href="./lambdas.html">12.lambdas</a></li>
+              <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+              <li><a href="./File_handling.html">14.File_Handling</a></li>
+              <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+              <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+              <li><a href="./sql.html">17.Database_Management</a></li>
+            </ul>
+            
+            
+        
+        
+            <p>    
+                
+                <span>SEQUENCES:</span><br><br><br>
+                • Sequence allows us to store multiple values in an organized and efficient manner.<br>
+                •Python language provides the following sequences.<br>
+                1)List<br>
+                2)Tuple<br>
+                3)Set<br>
+                4)FrozenSet<br>
+                5)Dictionary<br>
+                <span>List:</span> A list can be used for storing a group of elements enclosed in a pair of [ ].<br>
+                1)The list allows duplicates.<br>
+                2)The list is ordered by insertion.<br>
+                3)The list is mutable.<br>
+                4)The size of the list can increase or decrease.<br>
+                5)The list can store either same type or different types of elements.<br>
+                6)The list allows indexing and slicing.<br>
+                • A list can be created in 2 ways.<br>
+                • A list can be created by enclosing a group of values in a pair of [].<br>
+               <b> Syntax for creating a list by using []:</b><br>
+               <b> i)list_name = [group of values]</b><br>
+                Note: Within the [] we can specify any number of values separated by comma.<br>
+                Example:<br>
+                rnos = [ ]<br>
+                A list can be empty.<br>
+                rnos = [10, 20, 30, 40, 50]<br>
+                marks = [56.7, 38.9, 77.7, 59.6]<br>
+                names = ['abcd',  'xyzw',  'pqrs',  'mnop']<br>
+                student = [25, 'abcd', 78.9, True,  'hyderabad']<br>
+                <b>ii)A list can be created by using list().</b><br>
+                <b>Syntax for creating a list by using list():</b><br>
+                list_name = list(range()/str/sequence)<br>
+                Example:<br>
+                rnos = list()<br>
+                A list can be empty.<br>
+                rnos = list(range(1,11))  &emsp;&emsp;    				[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]<br>
+                rnos = list(range(2,11,2)) &emsp;&emsp;  		[2, 4, 6, 8, 10]	<br>
+                msg = 'python language'
+                data = list(msg)                         &emsp;&emsp;                ['p', 'y', 't', 'h', 'o', 'n', ' ', 'l', 'a', 'n', 'g', 'u', 'a', 'g', 'e']<br>
+                nos = [10,20,30,40,50]<br>
+                data = list(nos) &emsp;&emsp;	[10, 20, 30, 40, 50]<br>
+                <b>Concatenation of list:</b> We can create a list by concatenating two lists.<br>
+                Example:<br>
+                a = [1, 2, 3]<br>
+                b = [4, 5 ,6]<br>
+                c = a + b<br>
+                print(a)				&emsp;&emsp;			[1, 2, 3]	<br>
+                print(b)				&emsp;&emsp;			[4, 5, 6]	<br>
+                print(c)				&emsp;&emsp;			[1, 2, 3, 4, 5, 6]<br>	
+                <b>Repetition Operator on list: </b> We can create a list by repeating the elements of a list multiple times.<br>
+                Example:<br>
+                a = [1, 2, 3]<br>
+                b = a * 2<br>
+                print(a)&emsp;&emsp;	[1, 2, 3]<br>
+                print(b)	&emsp;&emsp;[1, 2, 3, 1, 2, 3]<br>
+                <b>Indexing:</b> It is a process of accessing an element from a list based on index position(either forward or backward).<br>
+                Example:<br>
+                nos = [2, 5, 8, 1, 7, 5, 3, 6]<br>
+                print(nos[2])			&emsp;&emsp;			8<br>
+                print(nos[-4])		&emsp;&emsp;				7<br>
+                print(nos[10])			&emsp;&emsp;			IndexError<br>
+                <b>Slicing:</b> It is a process of accessing a group of elements from a list.<br>
+                Example:<br>
+                nos = [2, 5, 8, 1, 7, 5, 3, 6]<br>
+                print(nos[1:5])	&emsp;&emsp;			[5, 8, 1, 7]<br>
+                print(nos[2:])		&emsp;&emsp;				[8, 1, 7, 5, 3, 6]<br>
+                print(nos[:6])		&emsp;&emsp;				[2, 5, 8, 1, 7, 5]<br>
+                print(nos[:])		&emsp;&emsp;				[2, 5, 8, 1, 7, 5, 3, 6]<br>
+                print(nos[::])		&emsp;&emsp;				[2, 5, 8, 1, 7, 5, 3, 6]<br>
+                print(nos[::2])		&emsp;&emsp;				[2, 8, 7, 3]<br>
+                <b>Using Membership operators in lists.</b>  <br>   
+                Example:<br>
+                data = [2,6,1,9,5,4,8,3]<br>
+                print(2 in data)		&emsp;&emsp;				True<br>
+                print(7 in data)		&emsp;&emsp;				False<br>
+                print(2 not in data)	&emsp;&emsp;				False<br>
+                print(7 not in data)	&emsp;&emsp;				True<br><br><br>
+               <span> Methods of list:</span><br>
+                   <b> append():</b> This method will place the specified element at the end of list.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    print(nos)	&emsp;&emsp;			[2, 5, 8, 1, 7, 3, 6]<br>
+                    nos.append(4)<br>
+                    print(nos)		&emsp;&emsp;			[2, 5, 8, 1, 7, 3, 6, 4]<br>
+                   <b> insert():</b> This method will insert the specified element at the specified index position.<br>
+                    Example: <br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    print(nos)		&emsp;&emsp;				[2, 5, 8, 1, 7, 3, 6]<br>
+                    nos.insert(1,9)<br>
+                    print(nos)			&emsp;&emsp;			[2, 9, 5, 8, 1, 7, 3, 6]<br>
+                    <b>extend():</b> This method can add a group of elements or multiple values into the existing list.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    newnos = [11, 22, 33]<br>
+                    print(nos)			&emsp;&emsp;			[2, 5, 8, 1, 7, 3, 6]<br>
+                    nos.extend(newnos)<br>
+                    print(nos)			&emsp;&emsp;			[2, 5, 8, 1, 7, 3, 6, 11, 22, 33]<br>
+                    <b>remove(): </b> This method can be used to remove the first occurence of the specified element if available, otherwise we get ValueError.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 5, 3, 6]<br>
+                    print(nos)		&emsp;&emsp;				[2, 5, 8, 1, 7, 5, 3, 6]<br>
+                    nos.remove(5)<br>
+                    print(nos)			&emsp;&emsp;			[2, 8, 1, 7, 5, 3, 6]<br>
+                    nos.remove(9)					ValueError<br>
+                    print(nos)<br>
+                    <b>pop():</b>This method can be used to remove the last element or the remove the element available at the specified index position. If we specify the index position out of range, then we get IndexError.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 5, 3, 6]<br>
+                    print(nos)		&emsp;&emsp;				[2, 5, 8, 1, 7, 5, 3, 6]<br>
+                    nos.pop()<br>
+                    print(nos)		&emsp;&emsp;				[2, 5, 8, 1, 7, 5, 3]<br>
+                    nos.pop(3)<br>
+                    print(nos)		&emsp;&emsp;				[2, 5, 8, 7, 5, 3]<br>
+                    nos.pop(9)		&emsp;&emsp;				IndexError<br>
+                    print(nos)<br>
+
+                   <b> clear(): </b>This method will remove all the elements from the list.<br>
+                    Example: <br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    print(nos)		&emsp;&emsp;				[2, 5, 8, 1, 7, 3, 6]<br>
+                    nos.clear()<br>
+                    print(nos)			&emsp;&emsp;			[]<br>
+                    <b>reverse():</b> This method will reverse the elements of the list.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    print(nos)		&emsp;&emsp;				[2, 5, 8, 1, 7, 3, 6]<br>
+                    nos.reverse()<br>
+                    print(nos)			&emsp;&emsp;			[6, 3, 7, 1, 8, 5, 2]<br>
+                    <b>sort(): </b>This method will sort the elements available in the list.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    print(nos)			&emsp;&emsp;			[2, 5, 8, 1, 7, 3, 6]<br>
+                    nos.sort()<br>
+                    print(nos)			&emsp;&emsp;			[1, 2, 3, 5, 6, 7, 8]<br>
+                   <b> count():</b> This method will return the count of the number of occurrences or repetition of the specified element.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 5, 3, 6]<br>
+                    print(nos.count(5))		&emsp;&emsp;		2<br>
+                    print(nos.count(9))		&emsp;&emsp;			0<br>
+                   <b>index(): </b> This method will return the index of the first occurrence of the specified element if available otherwise we get ValueError.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 5, 3, 6]<br>
+                    print(nos.index(5))		&emsp;&emsp;			1<br>
+                    print(nos.index(9))		&emsp;&emsp;			ValueError<br>
+                   <b> copy():</b> This method will create a new list by copy the elements of existing list.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    data = nos.copy()<br>
+                    print(nos)			&emsp;&emsp;			[2, 5, 8, 1, 7, 3, 6]<br>
+                    print(data)			&emsp;&emsp;			[2, 5, 8, 1, 7, 3, 6]<br>
+                   <b> len(): </b>This function will return the count of the numbers of elements available in a list.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    print(len(nos))	&emsp;&emsp;				7<br>
+
+                   <b> min(): </b> This function will return the minimum value available in a list.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    print(min(nos))	&emsp;&emsp;				1<br>
+                  <b> max():</b>  This function will return the maximum value available in a list.<br>
+                    Example: <br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    print(max(nos))		&emsp;&emsp;			8<br>
+                   <b> sum():</b> This function will return the sum of a elements available in the list.<br>
+                    Example:<br>
+                    nos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    print(sum(nos))		&emsp;&emsp;			32<br>
+                   <b> Accessing a list: </b>The elements in a list can be accessed with the help of a loop(either a for loop or a while loop).<br>
+                    Example: displaying the list elements using for loop.<br>
+                    rnos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    for x in rnos:<br>
+                    &emsp;&emsp;   print(x)<br>
+                    Example: displaying the list elements using while loop<br>
+                    rnos = [2, 5, 8, 1, 7, 3, 6]<br>
+                    i = 0<br>
+                    while i < len(rnos):<br>
+                    &emsp;&emsp;   print(rnos[i])<br>
+                    &emsp;&emsp;   i = i + 1<br>
+                    <b>Nesting: </b>A list can be nested in another list and the nesting can be done any number of times.<br>
+                    Example:<br>
+                    data = [11,22,33,44,[10,20,30]]<br>
+                    print(data)			&emsp;&emsp;		[11, 22, 33, 44, [10, 20, 30]]<br>
+                    print(data[4])	&emsp;&emsp;				[10, 20, 30]<br>
+                    print(data[4][1])&emsp;&emsp;				20<br>
+                    student = [[12,'abcd',56.7],[13,'pqrs',45.7],[14,'xyz',89.3]]<br>
+                    print(student[0])	&emsp;&emsp;			[12, 'abcd', 56.7]<br>
+                    print(student[1][1])&emsp;&emsp;				pqrs<br>
+
+
+
+
+
+                   <b>List Comprehensions: </b> List comprehension is a simple way to define and create lists based on existing lists. Comprehensions will provide a short and concise way to construct new list.<br>
+                    <b>Syntax:</b><br>
+                    new_list = [expression for variable in old_list [condition]]<br>
+
+                    Example:<br>
+                    chars = [ch for ch in 'python language']<br>
+                    print(chars)	&emsp;&emsp;				['p', 'y', 't', 'h', 'o', 'n', ' ', 'l', 'a', 'n', 'g', 'u', 'a', 'g', 'e']<br>
+
+                    Example:<br>
+                    vowels = [ch for ch in 'python language' if ch=='a' or ch=='e' or ch=='i' or ch=='o' or ch=='u']<br>
+                    print(vowels)		&emsp;&emsp;			['o', 'a', 'u', 'a', 'e']<br>
+
+                    Example:<br>
+                    nos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]<br>
+                    squares = [x ** 2 for x in nos]<br>
+                    print(squares)		&emsp;&emsp;				[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]<br>
+
+                    Example:<br>
+                    cubes = [x ** 3 for x in range(1,11)]<br>
+                    print(cubes)		&emsp;&emsp;				[1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]<br>
+
+                    Example:<br>
+                    nos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]<br>
+                    even_squares = [x ** 2 for x in nos if x % 2 == 0]<br>
+                    print(even_squares)	&emsp;&emsp;				[4, 16, 36, 64, 100]<br>
+
+                   <b> Program: assigning values to a variable from a list</b><br>
+                    a = 10<br>
+                    print(a)<br>
+                    b, c = 20, 30<br>
+                    print(b)<br>
+                    print(c)<br>
+                    d = int(input('Enter a number : '))<br>
+                    print(d)<br>
+                    e, f = [50, 60]<br>
+                    print(e)<br>
+                    print(f)<br>
+                    x,y,z = [int(n) for n in input ('Enter three numbers : ').split()]<br>
+                    print(x)<br>
+                    print(y)<br>
+                    print(z)<br><br><br><br>
+                   <span> Tuple:</span> A Tuple can be used for storing a group of elements enclosed in a pair of parenthesis( ).<br>
+                    A tuple allows duplicates.<br>
+                    The tuple is ordered by insertion.<br>
+                    The tuple is immutable.<br>
+                    The size of the tuple cannot increase or decrease.<br>
+                    In a tuple we can store either same type or different type of elements.<br>
+                    A tuple allows indexing and slicing.<br>
+                    A tuple provides a better performance than the list.<br>
+                    A tuple can be created in 2 ways<br>
+                    A tuple can be created by enclosing a group of values in a pair of ().<br>
+                   <b> Syntax for creating a tuple by using ():</b><br>
+                    tuple_name =  (group of values)<br>
+                   <b> Note:</b> Within the () we can specify any number of values separated by comma.<br>
+                    Example:<br>
+                    rnos = ()<br>
+                    A tuple can be empty.	<br>
+                    rnos = (10, 20, 30, 40, 50)<br>
+                    marks = (56.7, 38.9, 77.7, 59.6)<br>
+                    names = ('abcd',  'xyzw',  'pqrs',  'mnop')<br>
+                    customer = (123, 'abcd', 10000.34, 'abcd@domain.info')<br>
+                    A tuple cannot be created by specifying one element. If we specify a single element in a pair of () then it will be considered as a variable.<br>
+                    rno = (6)    it is a variable holding a single value.<br>
+                    To create a tuple with single element, we need to specify a comma(,) after the single element.<br>
+                    rno = (6, ) it is a tuple.<br>
+                    A tuple can be created by using tuple().<br>
+                    Syntax for creating a tuple by using tuple():<br>
+                    tuple_name = tuple(range()/str/sequence)<br>
+                    Example:<br>
+                    data = tuple()			&emsp;&emsp;		()<br>
+                    data = tuple(range(10))		&emsp;&emsp;		(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)<br>
+                    data = tuple(range(1,11))	&emsp;&emsp;			(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)<br>
+                    data = tuple(range(1,30,3))		&emsp;&emsp;		(1, 4, 7, 10, 13, 16, 19, 22, 25, 28)<br>
+                    msg = 'Hello'<br>
+                    data = tuple(msg)	&emsp;&emsp;      ('H’,’e’,’l’,’l’,’o’)	<br>
+                    l1 = [10,20,30,40]<br>
+                    data = tuple(l1)	&emsp;&emsp;				(10, 20, 30, 40)<br>
+                    t1 = (11,22,33,44,55,66)<br>
+                    data = tuple(t1)		&emsp;&emsp;			(11, 22, 33, 44, 55, 66)<br>
+                   <b> Concatenation of tuple:</b> We can create a tuple by concatenating two tuples.<br>
+                    Example:<br>
+                    a = (1, 2, 3)<br>
+                    b = (4, 5 ,6)<br>
+                    c = a + b<br>
+                    print(a)		&emsp;&emsp;					(1, 2, 3)<br>
+                    print(b)		&emsp;&emsp;					(4, 5, 6)<br>
+                    print(c)		&emsp;&emsp;					(1, 2, 3, 4, 5, 6)<br>
+                    <b>Repetition Operator on tuple:</b>  We can create a tuple by repeating the elements of a tuple multiple times.<br>
+                    Example:<br>
+                    a = (1, 2, 3)<br>
+                    b = a * 2<br>
+                    print(a)&emsp;&emsp;	(1, 2, 3)<br>
+                    print(b)&emsp;&emsp;	(1, 2, 3, 1, 2, 3)<br>
+                    <b>Indexing:</b> It is a process of accessing an element from a tuple based on index position(either forward or backward).<br>
+                    Example:<br>
+                    nos = (2, 5, 8, 1, 7, 5, 3, 6)<br>
+                    print(nos[2])	&emsp;&emsp;					8<br>
+                    print(nos[-4])	&emsp;&emsp;					7<br>
+                    print(nos[10])		&emsp;&emsp;				IndexError<br>
+
+                   <b>Slicing:</b>  It is a process of accessing a group of elements from a tuple.<br>
+                    Example:<br>
+                    nos = (2, 5, 8, 1, 7, 5, 3, 6)<br>
+                    print(nos[1:5])	&emsp;&emsp;			(5, 8, 1, 7)<br>
+                    print(nos[2:])	&emsp;&emsp;					(8, 1, 7, 5, 3, 6)<br>
+                    print(nos[:6])	&emsp;&emsp;					(2, 5, 8, 1, 7, 5)<br>
+                    print(nos[:])	&emsp;&emsp;					(2, 5, 8, 1, 7, 5, 3, 6)<br>
+                    print(nos[::])	&emsp;&emsp;					(2, 5, 8, 1, 7, 5, 3, 6)<br>
+                    print(nos[::2])	&emsp;&emsp;					(2, 8, 7, 3)<br>
+
+                   <b> Membership operations on tuple: </b>Using in and not in operators we can check whether an element is available or not available in the tuple.<br>
+                    Example:<br>
+                    data = (2, 6, 1, 9, 5, 4, 8, 3)<br>
+                    print(2 in data)	&emsp;&emsp;					True<br>
+                    print(7 in data)	&emsp;&emsp;					False<br>
+                    print(2 not in data)	&emsp;&emsp;				False<br>
+                    print(7 not in data)	&emsp;&emsp;				True<br>
+
+
+                   <span> Methods of tuple:</span><br>
+                   <b>count():</b>  This method will return the count of the number of occurrences or repetition of the specified element.<br>
+                    Example:<br>
+                    data = (11,22,33,44,55,66,22)<br>
+                    print(data.index(22))	&emsp;&emsp;				2<br>
+                    print(data.index(77))	&emsp;&emsp;				0<br>
+                   <b> index():</b> This method will return the index of the first occurrence of the specified element if available otherwise we get ValueError.<br>
+                   
+                    Example:<br>
+                    data = (11,22,33,44,55,66,22)<br>
+                    print(data.index(22))	&emsp;&emsp;				1<br>
+                    print(data.index(77))	&emsp;&emsp;				ValueError<br>
+                   <b> len(): </b>This function will return the count of the number of values available in the tuple.<br>
+                    Example:<br>
+                    data = (11,22,33,44,55,66,22)<br>
+                    print(len(data))		&emsp;&emsp;				7<br>
+                   <b> min():</b> This function will return the smallest value from the tuple.<br>
+                    Example:<br>
+                    data = (11,22,33,44,55,66,22)<br>
+                    print(min(data))	&emsp;&emsp;					11<br>
+                    <b>max():</b> This function will return the biggest value from the tuple.<br>
+                    Example:<br>
+                    data = (11,22,33,44,55,66,22)<br>
+                    print(max(data))		&emsp;&emsp;				66<br>
+                   <b> sum(): </b>This function will return the sum of all the values from the tuple.<br>
+                    Example:<br>
+                    data = (11,22,33,44,55,66,22)<br>
+                    print(sum(data))		&emsp;&emsp;				253<br>
+
+                   <b> Note:</b> When we are using min(), max(), sum() the elements in a tuple must be of same type.<br>
+                   <b> Accessing a tuple:</b> The elements in a tuple can be accessed with the help of a loop(either a for loop or a while loop).<br>
+                   <b> Program: displaying the tuple values using for loop</b><br>
+                    data = (11, 22, 33, 44, 55, 66)<br>
+                    for x in data:<br>
+                    &emsp;&emsp;    print(x)<br>
+                    n = len(data)<br>
+                    for x in range(n):<br>
+                    &emsp;&emsp;   print(data[x])<br>
+
+                   <b> Program: displaying the tuple values using while loop</b><br>
+                    data = (11, 22, 33, 44, 55, 66)<br>
+                    i = 0<br>
+                    while i < len(data):<br>
+                    &emsp;&emsp;    print(data[i])<br>
+                    &emsp;&emsp;    i = i + 1<br>
+
+                   <b> Nesting:</b> When are creating a tuple, we can specify a group of values and along with that values we can even specify a tuple or a list.<br>
+                    Example:<br>
+                    tup1 = (1, 2, 3)<br>
+                    tup2 = (4, 5, 6, (1, 2, 3))<br>
+                    tup3 = (7, 8, 9, tup1)<br>
+                    print(tup3)			&emsp;&emsp;			(7, 8, 9, (1, 2, 3))<br>
+                    print(tup3[1])		&emsp;&emsp;				8<br>
+                    print(tup3[3][2])	&emsp;&emsp;				3<br>
+
+                    list1 = [2, 4, 6]<br>
+                    tup4 = (1, 2, 3, [2, 4, 6])<br>
+                    tup5 = (1, 2, 3, list1)<br>
+                    print(tup5)		&emsp;&emsp;				(1, 2, 3, [2, 4, 6])<br>
+                    print(tup5[1])	&emsp;&emsp;					2<br>
+                    print(tup5[3][2])	&emsp;&emsp;				6<br><br><br>
+                   <span> Set: </span>A set can be used for storing a group of elements enclosed in a pair of { }.<br>
+                    A set does not allow duplicates.<br>
+                    A set does not guarantee the order of insertion<br>
+                    A set is mutable.<br>
+                    The size of the set can increase or decrease.<br>
+                    A set can store either same type or different type of elements.<br>
+                    A set does not have any index position and therefore it does not support indexing and slicing.<br>
+                    A set can be created in 2 ways<br>
+                    A set can be created by enclosing a group of values in a pair of {}.<br>
+                   <b> Syntax for creating a set by using {}:</b><br>
+                    set_name = {group of values}<br>
+                    Example:<br>
+                    empids = {203, 409, 503, 701, 321}  <br>
+                    salary = {2361.1, 5685.6, 9059.7, 12373.5, 63298.2}<br>
+                    names = {"ghi", "klm", "pqr", "stuv", "abc"}<br>
+                    employee = {34563, "abcd", 23000, "software engineer"}<br>
+                    If we do not specify any values in a set, then it will be by default considered as dictionary.<br>
+                    nos = { } &emsp;&emsp;   it is a dictionary<br>
+                   <b> Note:</b> We cannot create an empty set by using {}<br>
+                    A set can be created with the help of set()<br>
+                    A set can be created by using set().<br>
+                   <b> Syntax for creating a set by using set():</b><br>
+                    set_name =  set(range()/str/sequence)<br>
+                    Example:<br>
+                    nos = set()		&emsp;&emsp; 				set()<br>	
+                    nos = set(range(10))&emsp;&emsp; 				{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}<br>
+                    nos = set(range(1,11))&emsp;&emsp; 				{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}<br>
+                    nos = set(range(2,21,3))&emsp;&emsp; 				{2, 5, 8, 11, 14, 17, 20}<br>
+                    msg = 'good morning'<br>
+                    nos = set(msg)	&emsp;&emsp; 				{'r', 'g', 'o', 'd', 'i', 'm', ' ', 'n'}<br>
+                    l1 = [10,20,30,40]<br>
+                    nos = set(l1)	&emsp;&emsp; 				{40, 10, 20, 30}	<br>
+                    t1 = (10,20,30,40,50,60)<br>
+                    nos = set(t1)	&emsp;&emsp; 				{40, 10, 50, 20, 60, 30}<br>	
+                    s1 = {10,20,30,40,50,60,70,80}<br>
+                    nos = set(s1)	&emsp;&emsp; 				{70, 40, 10, 80, 50, 20, 60, 30}<br>
+
+                  <b> Note:</b>  We cannot perform concatenation and repetition operations on the sets.<br>
+                   <b> Membership Operations on set:</b> Using in and not in operators, we can check whether a specified element is available or not available in a set.<br>
+                    Example:<br>
+                    data = {1, 2, 3, 4, 5, 6}<br>
+                    print(1 in data)	&emsp;&emsp; 					True<br>
+                    print(8 in data)	&emsp;&emsp; 					False<br>
+                    print(1 not in data)	&emsp;&emsp; 				False<br>
+                    print(8 not in data)	&emsp;&emsp; 				True<br>
+
+                    Methods of set:<br>
+                  <b> add():</b>  This method will place the specified element into the set.<br>
+                    Example: <br>
+                    nos = {32, 15, 46, 68, 90}<br>
+                    print(nos)		&emsp;&emsp; 				{32, 68, 46, 15, 90}<br>
+                    nos.add(81)<br>
+                    print(nos)		&emsp;&emsp; 				{32, 68, 46, 15, 81, 90}<br>
+                   <b> update(): </b>This method will place multiple elements into the set available in a sequence (list/tuple/set).<br>
+                    Example: <br>
+                    nos = {32, 15, 46, 68, 90}<br>
+                    print(nos)			&emsp;&emsp; 			{32, 68, 46, 15, 90}<br>
+                    list1 = [10, 20, 30]<br>
+                    nos.update(list1)<br>
+                    print(nos)		&emsp;&emsp; 				{32, 68, 10, 46, 15, 20, 90, 30}<br>
+                    nos = {32, 15, 46, 68, 90}<br>
+                    print(nos)		&emsp;&emsp; 				{32, 68, 46, 15, 90}<br>
+                    tuple1 = (11, 22, 33)<br>
+                    nos.update(tuple1)<br>
+                    print(nos)			&emsp;&emsp; 			{32, 33, 68, 11, 46, 15, 22, 90}<br>
+                    nos = {32, 15, 46, 68, 90}<br>
+                    print(nos)			&emsp;&emsp; 			{32, 68, 46, 15, 90}<br>
+                    set1 = {15, 25, 35}<br>
+                    nos.update(set1)<br>
+                    print(nos)		&emsp;&emsp; 				{32, 35, 68, 46, 15, 25, 90}<br>
+                  <b>  pop(): </b>This method will remove an arbitrary  element from the set.<br>
+                    Example: <br>
+                    nos = {32, 15, 46, 68, 90}<br>
+                    print(nos)			&emsp;&emsp; 			{32, 68, 46, 15, 90}<br>
+                    nos.pop()<br>
+                    print(nos)                         				{32, 68, 46, 90}<br>
+                   <b> remove():</b> This method will remove a specified element from the set if available, otherwise we get KeyError.<br>
+                    Example:<br>
+                    nos = {32, 15, 46, 68, 90}<br>
+                    print(nos)				&emsp;&emsp; 		{32, 68, 46, 15, 90}<br>
+                    nos.remove(46)<br>
+                    print(nos)		&emsp;&emsp; 				{32, 68, 15, 90}<br>
+                    nos.remove(45)		&emsp;&emsp; 			KeyError<br>
+                    print(nos)<br>
+                   <b> discard():</b>This method will remove a specified element from the set if available, otherwise it will do nothing.<br>
+                    Example:<br>
+                    nos = {32, 15, 46, 68, 90}<br>
+                    print(nos)			&emsp;&emsp; 			{32, 68, 46, 15, 90}<br>
+                    nos.discard(46)<br>
+                    print(nos)			&emsp;&emsp; 			{32, 68, 15, 90}<br>
+                    nos.discard(45)<br>
+                    print(nos)			&emsp;&emsp; 			{32, 68, 15, 90}<br>
+                   <b> clear():</b> This method will remove all the elements available in the set.<br>
+                    Example:<br>
+                    nos = {32, 15, 46, 68, 90}<br>
+                    print(nos)			&emsp;&emsp; 			{32, 68, 46, 15, 90}<br>
+                    nos.clear()<br>
+                    print(nos)		&emsp;&emsp; 				set()<br>
+                   <b> union():</b> This method will return all the elements available in the both the sets(AUB).<br>
+                   <b> intersection(): </b>This method will return the common elements available in the both the sets(AnB).<br>
+                   <b> difference():</b> This method will return the elements available in the first set but not available in the second set(A-B).<br>
+                    <b>symmetric_difference(): </b>This method will return all the elements which are not common in both the sets(AUB-AnB  or  A-BUB-A).<br>
+                    Example:<br>
+                    a = {1, 2, 3, 4, 5, 6}<br>
+                    b = {4, 5, 6, 7, 8, 9}<br>
+                    print(a)			&emsp;&emsp; 			{1, 2, 3, 4, 5, 6}<br>
+                    print(b)			&emsp;&emsp; 			{4, 5, 6, 7, 8, 9}<br>
+                    print(a.union(b))	&emsp;&emsp; 				{1, 2, 3, 4, 5, 6, 7, 8, 9}<br>
+                    print(a.intersection(b))&emsp;&emsp; 				{4, 5, 6}<br>
+                    print(a.difference(b))	&emsp;&emsp; 			{1, 2, 3}<br>
+                    print(b.difference(a))	&emsp;&emsp; 			{8, 9, 7}<br>
+                    print(a.symmetric_difference(b))&emsp;&emsp; 			{1, 2, 3, 7, 8, 9}<br>
+                 <b>   issubset(): </b>This method can be used to check whether a set is subset of another set or not.<br>
+                  <b>  issuperset():</b>This method can be used to check whether a set is superset of another set or not.<br>
+                   <b> isdisjoint():</b>This method can be used to check whether the two sets are disjoint are not.<br>
+                    Example: <br>
+                    print(s1)		&emsp;&emsp; 				{1, 2, 3, 4, 5, 6}<br>
+                    print(s2)		&emsp;&emsp; 				{4, 5, 6}<br>
+                    print(s1.issuperset(s2))	&emsp;&emsp; 			True<br>
+                    print(s2.issuperset(s1))	&emsp;&emsp; 			False	<br>
+                    print(s1.issubset(s2))	&emsp;&emsp; 			False<br>
+                    print(s2.issubset(s1))	&emsp;&emsp; 			True<br>
+                    print(s1.isdisjoint(s2))&emsp;&emsp; 				False<br>
+                  <b> copy():</b>  This method will create a new set by copying the elements of the existing set (shallow copy).<br>
+                    Example:<br>
+                    data = {50, 20, 40, 10, 60}<br>
+                    nos = data.copy()<br>
+                    print(data)			&emsp;&emsp; 			{40, 10, 50, 20, 60}<br>
+                    print(nos)		&emsp;&emsp; 				{50, 20, 40, 10, 60}<br>
+                 <b>  len():</b>  This function will return the count of the number of elements available in the set.<br>
+                    Example:<br>
+                    data = {50, 20, 40, 10, 60}<br>
+                    print(len(data))	&emsp;&emsp; 				5<br>
+                  <b>  min():</b>This function will return the smallest element available in the set.<br>
+                    Example:<br>
+                    data = {50, 20, 40, 10, 60}<br>
+                    print(min(data))	&emsp;&emsp; 				10<br>
+                   <b> max():</b>This function will return the biggest element available in the set.<br>
+                    Example:<br>
+                    data = {50, 20, 40, 10, 60}<br>
+                    print(max(data))	&emsp;&emsp; 				60<br>
+
+                  <b> Accessing a set:</b>  The elements in a set can be accessed with the help of a for loop.<br>
+                    Example using for loop:<br>
+                    data = {32, 15, 46, 68, 90}<br>
+                    for x in data:<br>
+                    &emsp;&emsp;    print(x)<br>
+
+                   <b> Note:</b> We cannot display the elements of a set with the help of while loop because the set does not support indexing.<br>
+                   <b> Nesting:</b> we cannot specify a set and list inside a set but we can specify only an immutable sequence (tuple/frozenset) in a set.<br>
+                    Example: <br>
+                    set1 = {1, 2, 5, 7, 8, (4, 5, 6)}<br>
+                    print(set1)		&emsp;&emsp; 				{1, 2, 5, 7, 8, (4, 5, 6)}<br>
+
+
+
+                  <b>  Set Comprehensions:</b> Set comprehension is a simple way to define and create sets based on existing sets. Comprehensions will provide a short and concise way to construct new set.<br>
+                    Example:<br>
+                    chars = {ch for ch in 'python language'}<br>
+                    print(chars)<br>
+                    Example:<br>
+                    vowels = {ch for ch in 'python language' if ch=='a' or ch=='e' or ch=='i' or ch=='o' or ch=='u'}<br>
+                    print(vowels)<br>
+                    Example:<br>
+                    nos = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}<br>
+                    squares = {x ** 2 for x in nos}<br>
+                    print(squares)<br>
+                    Example:<br>
+                    cubes = {x ** 3 for x in range(1,11)}<br>
+                    print(cubes)<br>
+                    Example:<br>
+                    nos = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}<br>
+                    even_squares = {x ** 2 for x in nos if x % 2 == 0}<br>
+                    print(even_squares)<br><br><br>
+
+                   <span> FrozenSet:</span> A frozen set can be used for storing a group of elements.<br>
+                    A frozen set does not allow duplicates.<br>
+                    A frozen set does not guarantee the order of insertion<br>
+                    A frozen set is immutable.<br>
+                    The size of the frozen set cannot increase or decrease.<br>
+                    A frozen set can store either same type or different type of elements.<br>
+                    A frozen set does not have any index position and therefore it does not support indexing and slicing.<br>
+
+                   <b> A FrozenSet can be created only in one way i.e. by using frozenset()</b><br>
+                    <b>Syntax for creating a frozenset by using frozenset():</b><br>
+                    frozenset_name = frozenset(range()/str/sequence)<br>
+
+                    Example:<br>
+                    fs1 = frozenset()<br>
+                    print(fs1)			&emsp;&emsp; 				frozenset()<br>
+                    fs2 = frozenset(range(1,11))<br>
+                    print(fs2)			&emsp;&emsp; 				frozenset({1, 2, 3, 4, 5, 6, 7, 8, 9, 10})<br>
+                    msg = 'good morning guys'<br>
+                    fs3 = frozenset(msg)<br>
+                    print(fs3)			&emsp;&emsp; 		          frozenset({' ', 'n', 'y', 'r', 'o', 'd', 'm', 'i', 'u', 's', 'g'})<br>
+                    list1 = [10,2.5,'hello',3+4j,True]<br>
+                    fs4 = frozenset(list1)<br>
+                    print(fs4)			&emsp;&emsp; 				frozenset({True, 2.5, 'hello', 10, (3+4j)})<br>
+                    tup1 = (8,1,2,3,7,3,5,6,4)<br>
+                    fs5 = frozenset(tup1)<br>
+                    print(fs5)			&emsp;&emsp; 				frozenset({1, 2, 3, 4, 5, 6, 7, 8})<br>
+                    s1 = {10,20,30,40,50}<br>
+                    fs6 = frozenset(s1)<br>
+                    print(fs6)			&emsp;&emsp; 				frozenset({50, 20, 40, 10, 30})<br>
+                    fs= frozenset({11,22,33,44,55})<br>
+                    fs7 = frozenset(fs)<br>
+                    print(fs7)			&emsp;&emsp; 				frozenset({33, 22, 55, 11, 44})<br>
+
+                  <b> Note:</b>  We cannot perform concatenation and repetition operations on the frozen sets.<br>
+                    Membership Operations on frozen set: Using in and not in operators, we can check whether a specified element is available or not available in a frozen set.<br>
+                    Example:<br>
+                    data = frozenset({1, 2, 3, 4, 5, 6})<br>
+                    print(1 in data)		&emsp;&emsp; 					True<br>
+                    print(8 in data)	&emsp;&emsp; 						False<br>
+                    print(1 not in data)	&emsp;&emsp; 					False<br>
+                    print(8 not in data)	&emsp;&emsp; 					True<br>
+
+                    Methods of frozen set:<br>
+                  <b>  union():</b> This method will return all the elements available in the both the frozen sets(AUB).<br>
+                   <b> intersection(): </b>This method will return the common elements available in the both the frozen sets(AnB).<br>
+                  <b>  difference():</b> This method will return the elements available in the first frozen set but not available in the second frozen set(A-B).<br>
+                  <b> symmetric_difference():</b>  This method will return all the elements which are not common in both the frozen sets(AUB-AnB  or  A-BUB-A).<br>
+                    Example:<br>
+                    fs1 = frozenset({1, 2, 3, 4, 5, 6})<br>
+                    fs2 = frozenset({4, 5, 6, 7, 8, 9})<br>
+                    print(fs1)			&emsp;&emsp; 				frozenset({1, 2, 3, 4, 5, 6})<br>
+                    print(fs2)			&emsp;&emsp; 				frozenset({4, 5, 6, 7, 8, 9})<br>
+                    print(fs1.union(fs2))	&emsp;&emsp; 				frozenset({1, 2, 3, 4, 5, 6, 7, 8, 9})<br>
+                    print(fs1.intersection(fs2))&emsp;&emsp; 					frozenset({4, 5, 6})<br>
+                    print(fs1.difference(fs2))	&emsp;&emsp; 				frozenset({1, 2, 3})<br>
+                    print(fs2.difference(fs1))		&emsp;&emsp; 			frozenset({8, 9, 7})<br>
+                    print(fs1.symmetric_difference(fs2))	&emsp;&emsp; 		frozenset({1, 2, 3, 7, 8, 9})<br>
+
+                  <b>  issubset():</b> This method can be used to check whether a frozen set is subset of another frozen set or not.<br>
+                  <b>  issuperset():</b> This method can be used to check whether a frozen set is superset of another frozen set or not.<br>
+                  <b>  isdisjoint(): </b>This method can be used to check whether the two frozen sets are disjoint are not.<br>
+                    Example: <br>
+                    fs1 = frozenset({1,2,3,4,5,6})<br>
+                    fs2 = frozenset({4,5,6})<br>
+                    fs3 = frozenset({7,8,9})<br>
+                    print(fs1.issubset(fs1))	&emsp;&emsp; 			True<br>
+                    print(fs2.issubset(fs1)) &emsp;&emsp; 				True<br>
+                    print(fs1.issuperset(fs2))	&emsp;&emsp; 			True<br>
+                    print(fs2.issuperset(fs1))&emsp;&emsp; 				False<br>
+                    print(fs1.isdisjoint(fs2))	&emsp;&emsp; 			False<br>
+                    print(fs2.isdisjoint(fs3))	&emsp;&emsp; 			True<br>
+                   <b>copy():</b>  This method will create a new frozen set by copying the elements of the existing frozen set (shallow copy).<br>
+                    Example:<br>
+                    fs1 = frozenset({50, 20, 40, 10, 60})<br>
+                    fs2 = fs1.copy()<br>
+                    print(fs1)			&emsp;&emsp; 			frozenset({50, 20, 40, 10, 60})<br>
+                    print(fs2)			&emsp;&emsp; 			frozenset({50, 20, 40, 10, 60})<br>
+                  <b> len():</b>  This function will return the count of the number of elements available in the frozen set.<br>
+                    Example:<br>
+                    data = frozenset({50, 20, 40, 10, 60})<br>
+                    print(len(data))	&emsp;&emsp; 				5<br>
+                  <b>  min():</b>This function will return the smallest element available in the frozen set.<br>
+                    Example:<br>
+                    data = frozenset({50, 20, 40, 10, 60})<br>
+                    print(min(data))	&emsp;&emsp; 				10<br>
+                  <b>  max():</b>This function will return the biggest element available in the frozen set.<br>
+                    Example:<br>
+                    data = frozenset({50, 20, 40, 10, 60})<br>
+                    print(max(data))	&emsp;&emsp; 				60<br>
+                   <b> sum(): </b><br>
+                    Example:<br>
+                    data = frozenset({50, 20, 40, 10, 60})<br>
+                    print(sum(data))	&emsp;&emsp; 				180<br>
+
+
+
+
+
+                    Accessing a frozen set: The elements in a frozen set can be accessed with the help of a for loop.<br>
+                    Example using for loop:<br>
+                    data = frozenset({32, 15, 46, 68, 90})<br>
+                    for x in data:<br>
+                    &emsp;&emsp;     print(x)<br>
+
+                    Note: We cannot display the elements of a frozen set with the help of while loop because the frozen set does not support indexing.<br>
+                    Nesting: we cannot specify a set and list inside a frozen set but we can specify an immutable sequence (tuple/frozenset) in a frozen set.<br>
+
+                    Example: <br>
+                    fs1 = frozenset({1, 2, 5, 7, 8, (4, 5, 6)})<br>
+                    print(fs1)		&emsp;&emsp; 				frozenset({1, 2, 5, 7, 8, (4, 5, 6)})<br>
+
+                    fs2 = frozenset({1, 2, 3, 4, frozenset({7, 8, 9})})<br>
+                    print(fs2)		&emsp;&emsp; 			frozenset({1, 2, 3, 4, frozenset({8, 9, 7})})<br><br><br>
+                    <span>Dictionary:</span> A dictionary can be used for storing a group of elements in the form of key - value pairs enclosed in a pair of {  }.<br>
+                        Every element in a dictionary must be specified in the form of key - value pairs. <br>
+                        The keys cannot be duplicated but the values can be duplicated.<br>
+                        The keys and values can be of either same type or different type.<br>
+                        The keys must be of any immutable type(numbers/bool/str/tuple/frozenset).<br>
+                        The values can be of any type.<br>
+                        Dictionary is mutable.<br>
+                        The size of the dictionary can be either increased or decreased.<br>
+                        The dictionary does not allow indexing and slicing.<br>
+                        We cannot perform concatenation and repetition. <br>
+
+                        A dict can be created in 2 ways:<br>
+                        A dict can be created by specifying the elements in a pair of {}.<br>
+                      <b> Syntax for creating a dict by using {}: </b> <br>
+                        dict_name = {key1:value1, key2:value2, ...}<br>
+                        Example:<br>
+                        dict1 = { }<br>
+                        dict2 = {1:56, 2:78, 7:93, 5:65, 6:73}<br>
+                        dict3 = {1:'xyz', 2:'mno', 7:'pqr', 5:'rst', 6:'abc'}<br>
+                        dict4 = {'xyz':55, 'mno':78, 'pqr':73, 'qwe':89, 'abc':76}<br>
+                        dict5 = {'xyz':45.6, 'mno':67.8, 'pqr':27.3, 'qwe':38.9, 'abc':70.2}<br>
+                        dict6 = {'xyz':'hyderabad', 'mno':'delhi', 'pqr':'mumbai', 'qwe':'pune', 'abc':'bangalore'}<br>
+                        dict7 = {1:101, 2:78.9, 7:4+5j, 5:True, 6:'Hello'}<br>
+                        dict8 = {(1,6):56, (2,5):78, (3,7):89}<br>
+                        dict9 = {1:[10,20,30], 2:(11,22,33), 7:{15,25,35,45}}<br>
+                        student = {'rno':23, 'name':'abcde', 'marks':67.8, 'result':True}<br>
+                        A dictionary can be created with the help of  dict()<br>
+                      <b> Syntax for creating a dict by using dict():</b> <br>
+                        dict_name = dict(sequence)<br>
+                        Example:<br>
+                        dict1 = dict()<br>
+                        dict2 = dict({1:55,2:77,3:88,4:44,8:99})<br>
+                        dict3 = dict([(1,55),(2,77),(3,88),(4,44),(8,99)])<br>
+
+                      <b>  Membership Operations on dict:</b> Using in and not in operators, we can check whether a specified key is available or not available.<br>
+                        Example:<br>
+                        data = {1:45,2:56,3:67,4:89}<br>
+                        print(1 in data)	&emsp;&emsp; 					True<br>
+                        print(5 in data)	&emsp;&emsp; 					False<br>
+                        print(1 not in data)&emsp;&emsp; 					False<br>
+                        print(5 not in data)	&emsp;&emsp; 				True<br>
+
+                       <span> Methods of dict: </span><br>
+                       <b> get():</b> This method will return the value of the key which is specified if available otherwise we get None.<br>
+                        Example:<br>
+                        data = {1:45,2:56,3:67,4:89}<br>
+                        print(data.get(1))	&emsp;&emsp; 				45<br>
+                        print(data.get(5))	&emsp;&emsp; 				None<br>
+                        If the specified key is not available, then we can return a default value.<br>
+                        Example:<br>
+                        data = {1:45,2:56,3:67,4:89}<br>
+                        print(data.get(1,100))	&emsp;&emsp; 			45<br>
+                        print(data.get(5,99))	&emsp;&emsp; 			99<br>
+                        We can access the value of a key without using get().<br>
+                        <b>Syntax:</b><br>
+                        dict_name[key]<br>
+                        If the specified key is available, it will return the value otherwise we get KeyError.<br>
+                        Example:<br>
+                        data = {1:45,2:56,3:67,4:89}<br>
+                        print(data[1])		&emsp;&emsp; 			45<br>
+                        print(data[6])		&emsp;&emsp; 			KeyError<br>
+                       <b> update(): </b>This method can be used to add some key-value pairs into the dict or it can be used to update a value of a specified key.<br>
+                        Example:<br>
+                        d1 = {1:45,2:56,3:67,4:89}<br>
+                        d2 = {5:90,6:34,2:99}<br>
+                        print(d1)			&emsp;&emsp; 			{1: 45, 2: 56, 3: 67, 4: 89}<br>
+                        d1.update(d2)<br>
+                        print(d1)			&emsp;&emsp; 			{1: 45, 2: 99, 3: 67, 4: 89, 5: 90, 6: 34}<br>
+                        We can update a value without using update().<br>
+                        Example:<br>
+                        d1 = {1:45,2:56,3:67,4:89}<br>
+                        print(d1)			&emsp;&emsp; 			{1: 45, 2: 56, 3: 67, 4: 89}<br>
+                        d1[2] = 99<br>
+                        print(d1)			&emsp;&emsp; 			{1: 45, 2: 99, 3: 67, 4: 89}<br>
+                        d1[5] = 100<br>
+                        print(d1)			&emsp;&emsp; 			{1: 45, 2: 99, 3: 67, 4: 89, 5: 100}<br>
+                     <b>  popitem():</b>  This method will remove an arbitrary key-value from the dict.<br>
+                        Example:<br>
+                        data = {1:45,2:56,3:67,4:89}<br>
+                        print(data)		&emsp;&emsp; 				{1: 45, 2: 56, 3: 67, 4: 89}<br>
+                        data.popitem()<br>
+                        print(data)		&emsp;&emsp; 				{1: 45, 2: 56, 3: 67}<br>
+                     <b> pop():</b>   This method will remove the specified key along with its value if available otherwise we get KeyError.<br>
+                        Example:<br>
+                        data = {1:45,2:56,3:67,4:89}<br>
+                        print(data)			&emsp;&emsp; 			{1: 45, 2: 56, 3: 67, 4: 89}<br>
+                        data.pop(1)<br>
+                        print(data)			&emsp;&emsp; 			{2: 56, 3: 67, 4: 89}<br>
+                        data.pop(5)			&emsp;&emsp; 		KeyError<br>
+                        print(data)	
+                      <b>clear():</b>   This method will remove all the key-value pairs available in the dict.<br>
+                        Example: <br>
+                        data = {1:45,2:56,3:67,4:89}<br>
+                        print(data)		&emsp;&emsp; 				{1: 45, 2: 56, 3: 67, 4: 89}<br>
+                        data.clear()<br>
+                        print(data)		&emsp;&emsp; 				{}<br>
+                      <b> keys():</b> This method will return all the keys available in the dict.<br>
+                        Example:<br>
+                        data = {1:45,2:56,3:67,4:89}<br>
+                        print(data.keys())		&emsp;&emsp; 			dict_keys([1, 2, 3, 4])<br>
+                      <b>  values():</b> This method will return all the values available in the dict.<br>
+                        Example:<br>
+                        data = {1:45,2:56,3:67,4:89}<br>
+                        print(data.values())	&emsp;&emsp; 				dict_values([45, 56, 67, 89])<br>
+                     <b>  items(): </b> This method will return all the key-value pairs available in the dict.<br>
+                        Example:<br>
+                        data = {1:45,2:56,3:67,4:89}<br>
+                        print(data.items())		&emsp;&emsp; 		dict_items([(1, 45), (2, 56), (3, 67), (4, 89)])<br>
+                       <b> copy():</b> This method will create a dict by copying the key-value pairs available in the existing dict.<br>
+                        Example:<br>
+                        d1 = {1:45,2:56,3:67,4:89}<br>
+                        d2 = d1.copy()<br>
+                        print(d1)		&emsp;&emsp; 				{1: 45, 2: 56, 3: 67, 4: 89}<br>
+                        print(d2)		&emsp;&emsp; 				{1: 45, 2: 56, 3: 67, 4: 89}<br>
+                      <b> len():</b>  This function will return the count of the number of key-value pairs available in the dict.<br>
+                        Example:<br>
+                        data = {5:45,22:56,43:67,14:89}<br>
+                        print(len(data))	&emsp;&emsp; 				4<br>
+                     <b>   min(): </b>This function will return the smallest key from the dict.<br>
+                        Example:<br>
+                        data = {5:45,22:56,43:67,14:89}<br>
+                        print(min(data))	&emsp;&emsp; 				5<br>
+                      <b>  max():</b> This function will return the biggest key from the dict.<br>
+                        Example:<br>
+                        data = {5:45,22:56,43:67,14:89}<br>
+                        print(max(data))	&emsp;&emsp; 				43<br>
+                      <b>  sum():</b> This function will return the sum of all the keys from the dict.<br>
+                        Example:<br>
+                        data = {5:45,22:56,43:67,14:89}<br>
+                        print(sum(data))	&emsp;&emsp; 				84<br>
+
+                      <b>  Nesting of dict:</b> We can specify a dict inside a dict and the nesting can be done any number of times.<br>
+                        Example:<br>
+                        student={1:{'name':'abcd', 'marks':67.8, 'rno':12}, 2:{'name':'pqrs', 'marks':45.6, 'rno':13}}<br>
+                        print(student)		&emsp;&emsp; 	 		{1: {'name': 'abcd', 'marks': 67.8, 'rno': 12}, <br>
+                        &emsp;&emsp;      2: {'name': 'pqrs', 'marks': 45.6, 'rno': 13}}<br>
+                        print(student[1])	&emsp;&emsp; 			{'name': 'abcd', 'marks': 67.8, 'rno': 12}<br>
+                        print(student[2]['name'])	&emsp;&emsp; 		pqrs<br>
+
+
+
+                       <b> Accessing a dict:</b> The elements in a dict can be accessed with the help of a for loop.<br>
+                        Example using for loop:<br>
+                        dict1 = {1:45,2:56,3:67,4:89}<br><br>
+                        for x in dict1:<br>
+                        &emsp;&emsp;     print(x)<br>
+                        for x in dict1.keys():<br>
+                        &emsp;&emsp;     print(x) <br>
+                        for x in dict1.values():<br>
+                        &emsp;&emsp;     print(x)<br>
+                        for x in dict1.keys():<br>
+                        &emsp;&emsp;     print(dict1[x])<br>
+                        for x in dict1.items():<br>
+                        &emsp;&emsp;     print(x)<br>
+
+                      <b>  Dictionary Comprehensions:</b> Dictionary comprehension is a simple way to define and create Dictionary based on existing Dictionaries. Comprehensions will provide a short and concise way to construct new Dictionary.<br>
+                        Example:<br>
+                        nos = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}<br>
+                        squares = {x:x ** 2 for x in nos}<br>
+                        print(squares)	&emsp;&emsp; 		 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}<br>
+
+                        Example:<br>
+                        nos = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}<br>
+                        cubes = {x:x ** 3 for x in nos } <br>
+                        print(cubes) &emsp;&emsp; 		{1: 1, 2: 8, 3: 27, 4: 64, 5: 125, 6: 216, 7: 343, 8: 512, 9: 729, 10: 1000}<br>
+                        Example:<br>
+                        nos = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}<br>
+                        even_squares = {x:x ** 2 for x in nos if x % 2 == 0}<br>
+                        print(even_squares)	&emsp;&emsp; 			{2: 4, 4: 16, 6: 36, 8: 64, 10: 100}<br>
+
+
+
+
+                                    
+                                    
+                                    
+                                    
+                
+
+
+
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>

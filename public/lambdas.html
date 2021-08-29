@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 375px) and (max-width: 812px)" href="./css/iphoneX.css">
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 568px)" href="./css/5/se.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">  
+    <title>Lambdas</title>
+</head>
+<body>
+    <header >
+        <nav id="nav">
+            <div class="container">
+            <h1>Lambdas</h1>
+            <br>
+            
+            
+            </div>
+        </nav>
+
+    </header>
+    <div class="intro" >
+
+       
+            <ul>
+
+
+
+
+                <li><a href="./index.html">1.Introduction</a></li>
+                <li><a href="./variables.html">2. Variables </a></li>
+                <li><a href="./data_types.html">3.Data types</a></li>
+                <li><a href="./operators.html">4.Operators</a>  </li>
+                <li><a  href="./conditional.html">5.Conditional_stmts</a>    </li>
+                <li><a href="./in,print.html">6.I/O_Operations</a></li>
+                <li><a href="./Iterative.html">7.Iterative_stmts</a></li>
+                <li><a href="./Functions.html">8.Functions</a></li>
+                <li><a href="./arguments.html"> 8.1.Arguments</a></li>
+                <li><a href="./sequences.html">9.Sequences</a></li>
+                <li><a href="./modules.html">10.Modules</a></li>
+                <li><a href="./Oops.html">11.Oops_Introduction</a></li>
+                <li><a href="./oops2.html">11.1.Methods</a></li>
+                <li><a href="./inheritance.html">11.2.Inheritance</a></li>
+                <li><a href="./polymorphism.html">11.3.Polymorphism</a></li>
+                <li><a href="./Encapsulation.html">11.5.Encapsulation</a></li>
+                <li class="current"><a href="./lambdas.html">12.lambdas</a></li>
+                <li><a href="./Exception_handling.html">13.Exception_Handling</a></li>
+                <li><a href="./File_handling.html">14.File_Handling</a></li>
+                <li><a href="./multi_threading.html">15.Multi_Threading</a></li>
+                <li><a href="./iter_gen.html">16.Iterators_generators</a></li>
+                <li><a href="./sql.html">17.Database_Management</a></li>
+                
+            </ul>
+            
+            
+        
+        
+            <p> <span>  What are Lambda Functions?</span><br>
+                In Python, we use the lambda keyword to declare an anonymous function, which is why we refer to them as "lambda functions". An anonymous function refers to a function declared with no name. Although syntactically they look different, lambda functions behave in the same way as regular functions that are declared using the def keyword. The following are the characteristics of Python lambda functions:<br>
+                
+                A lambda function can take any number of arguments, but they contain only a single expression. An expression is a piece of code executed by the lambda function, which may or may not return any value.<br>
+                Lambda functions can be used to return function objects.<br>
+                Syntactically, lambda functions are restricted to only a single expression.<br>
+                In this article, we will discuss Python's lambda functions in detail, as well as show examples of how to use them.<br>
+                
+               <b> Creating a Lambda Function:</b><br>
+                We use the following syntax to declare a lambda function:<br>
+                
+                lambda argument(s): expression<br><br>
+                As stated above, we can have any number of arguments but only a single expression. The lambda operator cannot have any statements and it returns a function object that we can assign to any variable.<br>
+                
+                For example:<br>
+                
+                remainder = lambda num: num % 2<br>
+                
+                print(remainder(5))&emsp;&emsp;1<br>
+                
+                
+                
+                In this code the lambda num: num % 2 is the lambda function. The num is the argument while num % 2 is the expression that is evaluated and the result of the expression is returned. The expression gets the modulus of the input parameter by 2. Providing 5 as the parameter, which is divided by 2, we get a remainder of 1.<br>
+                
+                You should notice that the lambda function in the above script has not been assigned any name. It simply returns a function object which is assigned to the identifier remainder. However, despite being anonymous, it was possible for us to call it in the same way that we call a normal function. The statement:<br>
+                
+                lambda num: num % 2<br>
+                Is similar to the following:<br>
+                
+                def remainder(num):<br>
+                &emsp;&emsp;    return num % 2<br>
+                Here is another example of a lambda function:<br>
+                
+                product = lambda x, y : x * y<br>
+                
+                print(product(2, 3))  &emsp;&emsp;   6<br>
+                
+                
+                
+                The lambda function defined above returns the product of the values of the two arguments.<br>
+                
+                <span>Why Use Lambda Functions?</span><br><br>
+                Lambda functions are used when you need a function for a short period of time. This is commonly used when you want to pass a function as an argument to higher-order functions, that is, functions that take other functions as their arguments.<br>
+                
+                The use of anonymous function inside another function is explained in the following example:<br>
+                
+                def testfunc(num):<br>
+                &emsp;&emsp;     return lambda x : x * num<br>
+                In the above example, we have a function that takes one argument, and the argument is to be multiplied with a number that is unknown. Let us demonstrate how to use the above function:<br>
+                
+                def testfunc(num):<br>
+                &emsp;&emsp;     return lambda x : x * num<br>
+                
+                result1 = testfunc(10)<br>
+                
+                print(result1(9))    &emsp;&emsp;  90<br>
+                
+                
+                
+                In the above script, we use a lambda function to multiply the number we pass by 10. The same function can be used to multiply the number by 1000:<br>
+
+                def testfunc(num):<br>
+                &emsp;&emsp;    return lambda x : x * num<br>
+
+result2 = testfunc(1000)<br>
+
+print(result2(9))  &emsp;&emsp;      9000<br>
+
+
+
+It is possible for us to use the testfunc() function to define the above two lambda functions within a single program:<br>
+
+def testfunc(num):<br>
+&emsp;&emsp;   return lambda x : x * num<br>
+
+result1 = testfunc(10)<br>
+result2 = testfunc(1000)<br>
+
+print(result1(9)) &emsp;&emsp;   90<br>
+print(result2(9))  &emsp;&emsp;  9000<br>
+
+
+
+Lambda functions can be used together with Python's built-in functions like map(), filter() etc.<br>
+
+In the following section, we will be discussing how to use lambda functions with various Python built-in functions.<br>
+
+<b>The filter() Function</b><br>
+The Python's filter() function takes a lambda function together with a list as the arguments. It has the following <br>
+<b>syntax:</b><br>
+
+filter(object, iterable)<br>
+The object here should be a lambda function which returns a boolean value. The object will be called for every item in the iterable to do the evaluation. The result is either a True or a False for every item. Note that the function can only take one iterable as the input.<br>
+
+A lambda function, along with the list to be evaluated, is passed to the filter() function. The filter() function returns a list of those elements that return True when evaluated by the lambda funtion. Consider the example given below:<br>
+numbers_list = [2, 6, 8, 10, 11, 4, 12, 7, 13, 17, 0, 3, 21]<br>
+
+filtered_list = list(filter(lambda num: (num > 7), numbers_list))<br>
+
+print(filtered_list)  &emsp;&emsp;     [8, 10, 11, 12, 13, 17, 21]<br><br>
+In the above example, we have created a list named numbers_list with a list of integers. We have created a lambda function to check for the integers that are greater than 7. This lambda function has been passed to the filter() function as the argument and the results from this filtering have been saved into a new list named filtered_list.<br>
+<span>The map() Function</span><br>
+The map() function is another built-in function that takes a function object and a list. The syntax of map function is as follows:
+
+map(object, iterable_1, iterable_2, ...)
+The iterable to the map() function can be a dictionary, a list, etc. The map() function basically maps every item in the input iterable to the corresponding item in the output iterable, according to the logic defined by the lambda function. Consider the following example:<br>
+
+numbers_list = [2, 6, 8, 10, 11, 4, 12, 7, 13, 17, 0, 3, 21]<br>
+
+mapped_list = list(map(lambda num: num % 2, numbers_list))<br>
+
+print(mapped_list)  &emsp;&emsp;         [0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1]<br>
+
+
+
+In the script above, we have a list numbers_list, which consists of random numbers. We then call the map() function and pass it a lambda function as the argument. The lambda function calculates the remainder after dividing each number by 2. The result of the mapping is stored in a list named mapped_list. Finally, we print out the contents of the list.<br>
+                    
+            </p>
+        
+    </div>
+
+    
+</body>
+<footer><p></p><span>Published By:  </span><br>1)Sai Manoj Cheruvu  &emsp;&emsp;2)chaturya katragadda&emsp;&emsp;3)Manideep</p></footer>
+
+</html>
